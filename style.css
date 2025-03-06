@@ -1,0 +1,95 @@
+.wrapper{
+    height: 500px;
+    width: 800px;
+    display: flex;
+    border: solid black;
+    margin: auto;
+}
+.catagory{
+    background-color: black;
+    flex: 1;
+    text-align: center;
+    padding-top: 200px;
+}
+.catagory label{
+    color: white;
+    display: block;
+    border: solid thin black;
+    cursor: pointer;
+}
+.outer_body{
+    flex: 9;
+    display: flex;
+    transition: all 2s ease;
+}
+/* sub of outer body */
+.profile{
+    flex: 1; 
+    text-align: center;
+    padding: 5px;
+    padding-top: 100px;
+    background-color: #eadaeb;
+}
+.profile img{
+    width: 100px;
+    border-radius: 50%;
+    border: solid 2px white;
+}
+.contact_div{
+    flex: 0;
+    background-color: navajowhite;
+    transition: all 2s ease;
+}
+.inner_body{
+    flex: 4;
+    display: flex;
+    transition:all 2s ease;
+    overflow: hidden;
+}
+/* sub sub body -- sub of inner body */
+.home_div{
+    flex: 1;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    transition:all 2s ease;
+}
+.project_div{
+    flex: 0;
+    background-color: #f1f1f1;
+    transition:all 2s ease;
+    align-items: center;
+}
+/* styling home class and elements  */
+.display_box{
+    height: 200px;
+    width: 150px;
+    background-color: azure;
+    border: solid thin;
+    border-radius: 3%;
+    transition:all 2s ease;
+    overflow: hidden;
+}
+.display_top{
+    background-color: bisque;
+    text-align: center;
+    transition:all 2s ease;
+}
+.display_bottom{
+    border-top: solid;
+    transition:all 2s ease;
+    /*what to do with inside elements*/
+    text-align: center;
+}
+.display_top h1{
+    padding-top: 50px;
+    transition:all 2s ease;
+}
+
+/* style specific items*/
+h1, h2, h3, h4, h5, p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
