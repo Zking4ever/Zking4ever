@@ -1,26 +1,25 @@
-.wrapper{
-    height: 500px;
-    width: 800px;
+
+header{
+    width: 100%;
+    padding: 30px;
     display: flex;
-    border: solid black;
-    margin: auto;
-}
-.catagory{
+    justify-content: center;
     background-color: black;
-    flex: 1;
-    text-align: center;
-    padding-top: 200px;
 }
-.catagory label{
-    color: white;
-    display: block;
-    border: solid thin black;
-    cursor: pointer;
+nav{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blud(10px);
 }
 .outer_body{
-    flex: 9;
-    display: flex;
-    transition: all 2s ease;
+    flex: 90;
+}
+
+section{
+    margin: 50px auto;
+    background-color: seashell;
 }
 /* sub of outer body */
 .profile{
@@ -35,31 +34,10 @@
     border-radius: 50%;
     border: solid 2px white;
 }
-.contact_div{
-    flex: 0;
-    background-color: navajowhite;
-    transition: all 2s ease;
-}
 .inner_body{
     flex: 4;
-    display: flex;
     transition:all 2s ease;
     overflow: hidden;
-}
-/* sub sub body -- sub of inner body */
-.home_div{
-    flex: 1;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    transition:all 2s ease;
-}
-.project_div{
-    flex: 0;
-    background-color: #f1f1f1;
-    transition:all 2s ease;
-    align-items: center;
 }
 /* styling home class and elements  */
 .display_box{
@@ -87,6 +65,25 @@
     transition:all 2s ease;
 }
 
+
+.skills_container{
+    display: flex;
+    flex-direction: column;
+}
+.skill_item{
+    width: 50%;
+    margin: 10px auto;
+}
+.skill_title{
+    display: flex;
+    justify-content: space-between;
+}
+.skill_bar{
+    border: solid thin;
+    border-radius: 5px;
+    height: 15px;
+    background-color: rgb(45,45,45,0.3);
+}
 /* style specific items*/
 h1, h2, h3, h4, h5, p {
     display: block;

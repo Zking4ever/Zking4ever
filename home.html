@@ -8,12 +8,14 @@
 
 <body>
 	<div class="wrapper">
-		<div class="catagory">
-				<label for="home_rad">Home</label>
-				<label for="projects_rad">Projects</label>
-				<label for="contacts_rad">Contacts</label>
-				<label for="skills_rad">Skills</label>
-		</div>	
+		<header>
+		<nav class="catagory">
+				<a href="#home">Home</a>
+				<a href="#project">Projects</a>
+				<a href="#contact">Contacts</a>
+				<a href="#skill">Skills</a>
+		</nav>	
+	</header>
 		<div class="outer_body">	
 			<!-- profile info ---Astawus--- just comment every steps-->
 				<section class="profile">
@@ -22,15 +24,8 @@
 					<h3>My name Astawus Amsalu but you can call me Mr. Code</h3>
 					
 				</section>
-
-			<!---------contact div----------->
-				<section class="contact_div">
-								
-							
-				</section>
-
 					<!---------home div----- do your best astawus------>			
-				<section class="home_div">
+				<section id="home">
 							<div class="display_box">
 								<div class="display_top"> 
 									 	 <h1>frontend dev</h1>
@@ -48,9 +43,8 @@
 								</div>
 						   </div>
 				</section>
-
 					<!---------project div----------->
-					<section class="project_div">
+				<section id="project">
 							<!--------here i will have scroll btn projects--------------->
 							<div class="box"></div>
 							<div class="box"></div>
@@ -58,7 +52,34 @@
 							<div class="box"></div>
 							<div class="box"></div>
 							
-					</section>
+				</section>
+				<!---------skill div----------->
+					<section id="skill">
+						<h1> Skills </h1>
+						<div class="skills_container">
+							<div class="skill_item">
+								<div class="skill_title"> <span>HTML 5</span><span>95%</span></div>
+								<div class="skill_bar"><div  style="width: 95%; height: 100%; background-color: aqua;"></div></div>
+							</div>
+							<div class="skill_item">
+								<div class="skill_title"> <span>C++</span><span>92%</span></div>
+								<div class="skill_bar"><div  style="width: 92%; height: 100%; background-color: aqua;"></div></div>
+						    </div>
+							<div class="skill_item">
+								<div class="skill_title"> <span>CSS</span><span>90%</span></div>
+								<div class="skill_bar"><div style="width: 90%; height: 100%; background-color: aqua;"></div></div>
+						    </div>	
+							<div class="skill_item">
+								<div class="skill_title"> <span>JavaScript</span><span>86%</span></div>
+								<div class="skill_bar"><div style="width: 86%; height: 100%; background-color: aqua;"></div></div>
+						   </div>		
+					    </div>		
+					</section>	
+			<!---------contact div----------->
+			<section id="contact">
+								
+							
+			</section>
 				
 
 		</div>

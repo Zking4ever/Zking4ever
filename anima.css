@@ -3,80 +3,12 @@
     background-color: white;
     color: black;
     border: solid thin black;
-    height: 10%;
-}
-.left_class:hover {
-    height: 250px;
-    width: 200px;
-    border: solid skyblue;
-}
-.left_class:hover  > .inner_left_top{
-    background-color: azure;
-}
-.left_class:hover  > .inner_left_top h1{
-    padding-top: 30px;
-}
-.left_class:hover ~ .right_class{
-    background-color: bisque;
 }
 .display_box:hover {
     height: 250px;
     width: 200px;
     border: solid skyblue;
 }
-.right_class:hover  > .inner_right_top{
-    background-color: azure;
-
-}
-.right_class:hover  > .inner_right_top h1{
-    padding-top: 30px;
-}
-.right_class:hover ~ .left_class{
-    background-color: bisque;
-    width: 40px;
-}
-
-
-#home_rad:checked ~ .project_div{ 
-    flex: 0;
-    opacity: 0;
-}
-#projects_rad:checked ~ .home_div{
-    gap: 0px;
-    padding: 0; 
-    flex: 0;
-}
-#projects_rad:checked ~ .project_div{ 
-    flex: 6;
-}
-#projects_rad:checked ~ .home_div div{
-    transform:translateX(-1000px);
-    border: none;
-    background-color: transparent;
-    flex: 0;
-    width: 0px;
-
-}
-
-#contacts_rad:checked ~.outer_body .contact_div{
-    background-color: lightblue;
-    flex: 4;
-}
-#contacts_rad:checked ~.outer_body .inner_body{
-    flex: 0;
-}
 
 
 
-/*
-.inner_left:hover ~ .inner_right .inner_right_top {
-    background-color: bisque;
-}
-.inner_left:hover ~ .inner_right .inner_right_bottom {
-    background-color: azure;
-}
-
-.colors{
-    background-color: rgb(94, 126, 126);
-    #feffea
-}
