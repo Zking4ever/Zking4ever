@@ -4,19 +4,18 @@ body{
 header{
     width: 95%;
     padding: 30px;
+    position: fixed;
+    z-index: 1000;
     display: flex;
     justify-content: center;
-    background-color: black;
+    background-color: rgb(45,45,45,0.3);
+    backdrop-filter: blur(10px);
 }
 nav{
     width: 50%;
     text-align: center;
     display: flex;
     justify-content: space-between;
-    backdrop-filter: blur(10px);
-}
-section{
-    background-color: seashell;
 }
 /* styling home class and elements  */
 #home{
@@ -25,6 +24,10 @@ section{
     align-items: center;
     justify-content: right;
     overflow: hidden;
+}
+.txt_box{
+    display: flex;
+    flex-direction: column;
 }
 .image_box{
     height: 60%;
