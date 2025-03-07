@@ -1,6 +1,8 @@
-
+body{
+    margin: 0;
+}
 header{
-    width: 100%;
+    width: 95%;
     padding: 30px;
     display: flex;
     justify-content: center;
@@ -11,61 +13,32 @@ nav{
     text-align: center;
     display: flex;
     justify-content: space-between;
-    backdrop-filter: blud(10px);
+    backdrop-filter: blur(10px);
 }
-.outer_body{
-    flex: 90;
-}
-
 section{
-    margin: 50px auto;
     background-color: seashell;
 }
-/* sub of outer body */
-.profile{
-    flex: 1; 
-    text-align: center;
-    padding: 5px;
-    padding-top: 100px;
-    background-color: #eadaeb;
-}
-.profile img{
-    width: 100px;
-    border-radius: 50%;
-    border: solid 2px white;
-}
-.inner_body{
-    flex: 4;
-    transition:all 2s ease;
-    overflow: hidden;
-}
 /* styling home class and elements  */
-.display_box{
-    height: 200px;
-    width: 150px;
-    background-color: azure;
-    border: solid thin;
-    border-radius: 3%;
-    transition:all 2s ease;
+#home{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
     overflow: hidden;
 }
-.display_top{
-    background-color: bisque;
-    text-align: center;
-    transition:all 2s ease;
+.image_box{
+    height: 60%;
+    width: 40%;
+    border: solid thin;
+    border-radius: 10%;
+    overflow: hidden;
+    transform: translate(40px);
+    display: inline-block;
 }
-.display_bottom{
-    border-top: solid;
-    transition:all 2s ease;
-    /*what to do with inside elements*/
-    text-align: center;
+img{
+    width: 100%;
+    margin: 0;
 }
-.display_top h1{
-    padding-top: 50px;
-    transition:all 2s ease;
-}
-
-
 .skills_container{
     display: flex;
     flex-direction: column;
@@ -83,10 +56,4 @@ section{
     border-radius: 5px;
     height: 15px;
     background-color: rgb(45,45,45,0.3);
-}
-/* style specific items*/
-h1, h2, h3, h4, h5, p {
-    display: block;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
 }
