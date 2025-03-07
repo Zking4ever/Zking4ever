@@ -5,6 +5,7 @@ header{
     width: 100%;
     padding: 30px;
     position: fixed;
+    top: 0;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -20,11 +21,14 @@ nav{
 /* styling home class and elements  */
 #home{
     height: 80vh;
+    padding-top: 150px;
+}
+.descriptions{
     display: flex;
-    padding-top: 75px;
     align-items: center;
     justify-content: right;
     overflow: hidden;
+
 }
 .txt_box{
     display: flex;
@@ -44,6 +48,17 @@ img{
     width: 100%;
     margin: 0;
 }
+.move_now{
+    display: flex;
+    gap: 30px;
+    padding-left: 13%;
+    transform: translateY(-150%);
+}
+.go{
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(90deg,rgb(146, 9, 238),lightblue);
+}
 .skills_container{
     display: flex;
     flex-direction: column;
@@ -61,4 +76,8 @@ img{
     border-radius: 5px;
     height: 15px;
     background-color: rgb(45,45,45,0.3);
+}
+:root{
+    --primary_text_color : black;
+    --gradient: linear-gradient(90deg,rgb(228, 186, 109,0.6), rgb(146, 9, 238));
 }
