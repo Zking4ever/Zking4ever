@@ -64,6 +64,23 @@ img{
     border-radius: 10px;
     background: linear-gradient(90deg,rgb(146, 9, 238),lightblue);
 }
+/* styling project class and elements  */
+#project{
+    background-color: lightgray;
+    padding: 50px 70px;
+}
+.project_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 90px;
+}
+.project_box{
+  height: 400px;
+  width: 400px;
+  background-color: aliceblue;
+}
+/* styling skill class and elements  */
 .skills_container{
     display: flex;
     flex-direction: column;
