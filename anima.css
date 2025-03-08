@@ -3,7 +3,8 @@ nav a:hover{
     color: aqua;
 }
 .project_box:hover{
-    width: 700px;
+    width: 50%;
+    aspect-ratio: 2;
     
 }
 .project_box:hover > .project_img{
