@@ -18,6 +18,11 @@ nav{
     display: flex;
     justify-content: space-between;
 }
+nav a{
+    text-decoration:none;
+    color: var(--primary_text_color);
+    transition: all 0.5s;
+}
 /* styling home class and elements  */
 #home{
     height: 80vh;
