@@ -2,6 +2,16 @@ nav a:hover{
     text-decoration:none;
     color: aqua;
 }
-
-
-
+.project_box:hover{
+    width: 700px;
+    
+}
+.project_box:hover > .project_img{
+    height: 100%;
+    width: 50%;
+    border: 0;
+}
+.project_box:hover > .project_discr{
+    transform: translate(400px,-300px);
+    color: green;
+}
