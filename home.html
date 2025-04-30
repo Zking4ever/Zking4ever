@@ -7,72 +7,98 @@
 </head>
 
 <body>
-	<div class="wrapper">
-		<div class="catagory">
-				<label for="home_rad">Home</label>
-				<label for="projects_rad">Projects</label>
-				<label for="contacts_rad">Contacts</label>
-				<label for="skills_rad">Skills</label>
-		</div>	
-
-			<input id="contacts_rad" type="radio" name="myradios"style="display: none;">
-	
-		<div class="outer_body">
-		 		<div class="Title_box_contact"></div>		
-			<!-- profile info ---Astawus--- just comment every steps-->
-				<div class="profile">
-					<img class="pro_image" src="image/myimage.jpg">
-					<h1 style="font-size: 17px;">Hey World</h1>
-					<h3>My name Astawus Amsalu but you can call me Mr. Code</h3>
-					
+ <div class="wrapper">
+	<header>
+		<nav>
+				<a href="#home">Home</a>
+				<a href="#project">Projects</a>
+				<a href="#contact">Contacts</a>
+				<a href="#skill">Skills</a>
+		</nav>	
+	</header>	
+					<!---------home sec----- do your best astawus------>			
+	<section id="home">
+		<div class="descriptions">				
+				<div class="txt_box">
+								<span style="text-align: right;font-size: 27px;  font-family: monospace;">Amsalu</span>
+								<span style="font-size: 57px; font-family: monospace;">Astawus</span>
+								<span > Frontend Dev</span>
+							</div>
+				<div class="image_box"><img src="image/myimage.jpg"></div>
+	    </div>	
+		<div class="move_now">
+			<div class="go"><span>View My Work</span></div>
+			<div class="go"><span>Get in touch</span></div>
+		</div>
+						
+						
+	</section>
+					<!---------project sec----------->
+	<section id="project">
+		<span id="title">Project</span>
+		<div class="project_container">
+				<div class="project_box">
+						<div class="project_img">
+								<span style="font-size: 30px;">project photo</span>
+						</div>
+						<div class="project_discr"> Project 1</div>
+					</div>
+				<div class="project_box" style="align-self:flex-end;">
+					<div class="project_img">
+							<span style="font-size: 30px;">project photo</span>
+					</div>
+					<div class="project_discr"> Project 1</div>
 				</div>
-
+				<div class="project_box">
+					<div class="project_img">
+							<span style="font-size: 30px;">project photo</span>
+					</div>
+					<div class="project_discr"> Project 1</div>
+				</div>
+				<div class="project_box" style="align-self:flex-end;">
+					<div class="project_img">
+							<span style="font-size: 30px;">project photo</span>
+					</div>
+					<div class="project_discr"> Project 1</div>
+				</div>
+				<div class="project_box">
+					<div class="project_img">
+							<span style="font-size: 30px;">project photo</span>
+					</div>
+					<div class="project_discr"> Project 1</div>
+				</div>
+			</div>
+							
+	</section>
+				<!---------skill div----------->
+					<section id="skill">
+						<h1> Skills </h1>
+						<div class="skills_container">
+							<div class="skill_item">
+								<div class="skill_title"> <span>HTML 5</span><span>95%</span></div>
+								<div class="skill_bar"><div  style="width: 95%; height: 100%;background: var(--gradient);"></div></div>
+							</div>
+							<div class="skill_item">
+								<div class="skill_title"> <span>C++</span><span>92%</span></div>
+								<div class="skill_bar"><div  style="width: 92%; height: 100%;background: var(--gradient);"></div></div>
+						    </div>
+							<div class="skill_item">
+								<div class="skill_title"> <span>CSS</span><span>90%</span></div>
+								<div class="skill_bar"><div style="width: 90%; height: 100%;background: var(--gradient);"></div></div>
+						    </div>	
+							<div class="skill_item">
+								<div class="skill_title"> <span>JavaScript</span><span>86%</span></div>
+								<div class="skill_bar"><div style="width: 86%; height: 100%;background: var(--gradient);"></div></div>
+						   </div>		
+					    </div>		
+					</section>	
 			<!---------contact div----------->
-				<div class="contact_div">
+			<section id="contact">
 								
 							
-				</div>
-
-			<!-- here another body div to manupulate the home and projects page -->
-				<div class="inner_body">
-						<input id="home_rad" type="radio" name="myradios" style="display:none;" >
-						<input id="projects_rad" type="radio" name="myradios"style="display: none;">
-
-
-					<!---------home div----- do your best astawus------>			
-				        <div class="home_div">
-							<div class="display_box">
-								<div class="display_top"> 
-									 	 <h1>frontend dev</h1>
-								</div>
-								<div class="display_bottom"> 
-								         <p>I am a pasionate frontend developer who loves doing asthetic and ....</p>
-								</div>	
-						   </div>
-						   <div class="display_box">
-						   		<div class="display_top"> 
-									 	 <h1>creative man</h1>
-								</div>
-								<div class="display_bottom"> 
-									 	 <p>Creativity and hard work are my best friends since childhood. I love pushing limits to do an incredible and miraclus staffs</p>
-								</div>
-						   </div>
-						</div>
-
-					<!---------project div----------->
-						<div class="project_div">
-							<!--------here i will have scroll btn projects--------------->
-							<div class="box"></div>
-							<div class="box"></div>
-							<div class="box"></div>
-							<div class="box"></div>
-							<div class="box"></div>
-							
-						</div>
+			</section>
 				
 
-				</div>
-		</div>
 	</div>
 
 	
