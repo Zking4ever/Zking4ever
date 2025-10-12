@@ -1,0 +1,44 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.wrapper{
+  width: 1000px;
+  min-height: 98vh;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  width: min(80%,800px);
+  height: 4em;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: hsla(0, 0%, 99%, 0.527);
+  backdrop-filter: blur(500px);
+  border-radius: 30px;
+  position: fixed;
+}
+.header nav{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.content{
+  width: 100%;
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: rgb(85, 120, 120);
+  padding-top: 50px;
+}
+.navigator{
+  cursor: pointer;
+}
