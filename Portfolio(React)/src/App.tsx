@@ -1,11 +1,12 @@
 import './App.css'
-import Pages from './components/Pages'
+import Home from './pages/Home';
+import Pages from './pages/Pages'
 import { useState } from 'react'
 
 
 function App() {
 
-  const [currentPage,setCurrentPage] = useState('projects');
+  const [currentPage,setCurrentPage] = useState('home');
 
   function handleNavigatorClick(event){
       setCurrentPage(event.target.id);
@@ -18,6 +19,9 @@ function App() {
         <div className='header'>
             <div className="logo">AS</div>
             <nav>
+              <div className="glass" page={currentPage}>
+                {/*for the background glass moving around the header to identify current page */}
+              </div>
                 <span className='navigator' onClick={handleNavigatorClick} id='home'>Home</span>
                 <span className='navigator' onClick={handleNavigatorClick} id='about'>About</span>
                 <span className='navigator' onClick={handleNavigatorClick} id='projects'>Projects</span>
@@ -26,7 +30,7 @@ function App() {
             <div className="socials">Socials</div>
         </div>
         <div className="content">
-            <Pages currentPage={currentPage} />
+            <Pages currentPage={currentPage} clickHandler={handleNavigatorClick} />
         </div>
         
       </div>

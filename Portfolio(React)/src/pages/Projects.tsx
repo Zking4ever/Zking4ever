@@ -1,4 +1,3 @@
-import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 
 const projects = [
@@ -20,6 +19,9 @@ const projects = [
 ];
 
 const Projects = () => {
+    
+    document.title = 'projects';
+
     return (
         <div className="projects-container">
             <h1>My Projects</h1>
@@ -36,5 +38,6 @@ const Projects = () => {
         </div>
     );
 };
+
 
 export default Projects;

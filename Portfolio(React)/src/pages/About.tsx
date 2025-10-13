@@ -1,10 +1,9 @@
 import Footer from '../components/Footer';
 import profile from "../assets/user.png";
 
-const Home = (props) => {
-    const handleNavigatorClick = props.clickHandler;
+const About = () => {
     
-    document.title = 'home';
+    document.title = 'about';
     return (
         <>
             <div className='home'>
@@ -17,8 +16,8 @@ const Home = (props) => {
                     <p> A software developer with a passion for creating interactive and user-friendly applications. 
                          and get to know more about my work.
                     </p>
-                    <button onClick={handleNavigatorClick} id='projects'>Explore projects</button>
-                    <button onClick={handleNavigatorClick} id='contact'>Get in touch</button>
+                    <button>Explore projects</button>
+                    <button>Get in touch</button>
                 </section>
                 <section className='profile-section'>
                     <img src={profile} alt="profile" />
@@ -29,4 +28,4 @@ const Home = (props) => {
     );
 };
 
-export default Home;
+export default About;

@@ -30,6 +30,36 @@
   width: 50%;
   display: flex;
   justify-content: space-around;
+  color: black;
+  position: relative;
+}
+.navigator{
+  cursor: pointer;
+}
+.glass{
+  width: 100px;
+  height: 3em;
+  position: absolute;
+  align-self: center;
+  border-radius: 5px;
+  z-index: -1;
+  transition: all .5s ease;
+}
+.glass[page=home]{
+  background-color: rebeccapurple;
+  transform: translateX(-155px);
+}
+.glass[page=about]{
+  background-color: green;
+  transform: translateX(-60%);
+}
+.glass[page=projects]{
+  background-color: rgb(19, 0, 128);
+  transform: translateX(40%);
+}
+.glass[page=contact]{
+  background-color: rgb(0, 128, 102);
+  transform: translateX(150%);
 }
 .content{
   width: 100%;
@@ -39,6 +69,56 @@
   background-color: rgb(85, 120, 120);
   padding-top: 50px;
 }
-.navigator{
-  cursor: pointer;
+.home{
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 0px;
 }
+.welcome-section,
+.profile-section {
+  font-size: 1em;
+  width: 30%;
+}
+.greet{
+  display: flex;
+}
+.greet h1{
+  margin: 0;
+  text-align: right;
+}
+.welcome-section h3,a{
+  margin: 0;
+  text-align: center;
+  color: inherit;
+  transition: all .5s ease;
+}
+.welcome-section a:hover{
+  letter-spacing: 3px;
+  color: inherit;
+}
+.greet h1:last-of-type{
+    font-size: 4rem;
+    padding: 10px 0;
+    animation: shakeHand 1s ease;
+    animation-timeline: View;
+    animation-delay: .2s;
+}
+@keyframes shakeHand {
+  25%{
+    transform: rotate(9deg);
+  }
+  75%{
+    transform: rotate(-9deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.profile-section img{
+    width: 300px;
+    padding: 20px;
+    background-color: aqua;
+    border-radius: 50% 30%;
+}
+
