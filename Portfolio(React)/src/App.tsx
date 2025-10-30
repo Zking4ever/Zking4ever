@@ -1,5 +1,4 @@
 import './App.css'
-import Home from './pages/Home';
 import Pages from './pages/Pages'
 import { useState } from 'react'
 
@@ -8,8 +7,8 @@ function App() {
 
   const [currentPage,setCurrentPage] = useState('home');
 
-  function handleNavigatorClick(event){
-      setCurrentPage(event.target.id);
+  function handleNavigatorClick(x:string){
+      setCurrentPage(x);
   }
 
   return (
@@ -22,10 +21,10 @@ function App() {
               <div className="glass" page={currentPage}>
                 {/*for the background glass moving around the header to identify current page */}
               </div>
-                <span className='navigator' onClick={handleNavigatorClick} id='home'>Home</span>
-                <span className='navigator' onClick={handleNavigatorClick} id='about'>About</span>
-                <span className='navigator' onClick={handleNavigatorClick} id='projects'>Projects</span>
-                <span className='navigator' onClick={handleNavigatorClick} id='contact'>Contact</span>
+                <span className='navigator' onClick={()=>handleNavigatorClick('home')}>Home</span>
+                <span className='navigator' onClick={()=>handleNavigatorClick('about')}>About</span>
+                <span className='navigator' onClick={()=>handleNavigatorClick('projects')}>Projects</span>
+                <span className='navigator' onClick={()=>handleNavigatorClick('contact')}>Contact</span>
             </nav>
             <div className="socials">Socials</div>
         </div>
