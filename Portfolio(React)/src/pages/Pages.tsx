@@ -11,7 +11,7 @@ function Pages({currentPage,clickHandler}: {currentPage:string,clickHandler: (x:
             case "about": return(<About />);
             case "projects": return(<Projects />);
             case "contact": return(<Contact />);
-            default: return(<Home />);
+            default: return(<Home clickHandler={clickHandler}/>);
         }
 }
 export default Pages
