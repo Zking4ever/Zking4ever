@@ -29,8 +29,6 @@
 @media (max-width:760px) {
   .under-construction{
     font-size: small;
-    top: 2vh;
-    left: 2vw;
     width: 90vw;
   }
 }
