@@ -1,3 +1,39 @@
+.under-construction{
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 20px;
+  padding: 10px;
+  animation: shake 1.5s infinite;
+}
+.under-construction h3{
+  margin: 0;
+  font-size: large;
+}
+@keyframes shake {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  25% { transform: translateX(-50%) rotate(.5deg); }
+  50% { transform: translateX(-50%) rotate(0deg); }
+  75% { transform: translateX(-50%) rotate(-.5deg); }
+  100% { transform: translateX(-50%) rotate(0deg); }
+  
+}
+@media (max-width:760px) {
+  .under-construction{
+    font-size: small;
+    top: 2vh;
+    left: 2vw;
+    width: 90vw;
+  }
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
