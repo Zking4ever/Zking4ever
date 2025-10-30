@@ -46,7 +46,7 @@
   transition: all .5s ease;
 }
 .glass[page=home]{
-  background-color: rebeccapurple;
+  background-color: rgb(123, 164, 214);
   transform: translateX(-155px);
 }
 .glass[page=about]{
@@ -54,12 +54,12 @@
   transform: translateX(-60%);
 }
 .glass[page=projects]{
-  background-color: rgb(19, 0, 128);
+  background-color: rgba(86, 64, 209, 0.699);
   transform: translateX(40%);
 }
 .glass[page=contact]{
   background-color: rgb(0, 128, 102);
-  transform: translateX(150%);
+  transform: translateX(147%);
 }
 .content{
   width: 100%;
@@ -122,3 +122,119 @@
     border-radius: 50% 30%;
 }
 
+.project-card{
+  width: 300px;
+  margin: 10px;
+  color: black;
+  background-color: aliceblue;
+  border: solid transparent;
+  border-radius: 10px;
+  display: inline-block;
+}
+.project-picture{
+  overflow: hidden;
+}
+.project-picture img{
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all .3s ease;
+}
+.project-picture img:hover{
+  transform: scale(1.1);
+  filter: brightness(70%);
+}
+.project-info {
+  padding: 5px 20px;
+  text-align: left;
+}
+.project-title{
+  margin: 5px 0;
+  font-size: x-large;
+}
+.project-description{
+  margin: 0;
+  color: hsl(0, 8%, 35%);
+  font-size: medium;
+}
+.project-tools{
+  margin: 15px 0;
+}
+.tool{
+  background-color: hsl(0, 10%, 90%,.5);
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: small;
+  display: inline-block;
+  margin: 3px;
+}
+.project-buttons{
+  display: flex;
+  gap: 10px;
+}
+.project-buttons a{
+  font-size: 20px;
+  color: black;
+  border: solid black 1px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: all .3s ease;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.project-buttons a:last-of-type{
+  background-color: hsl(0, 68%, 5%);
+  color: white;
+}
+.project-buttons a:hover:not(:last-of-type){
+  background-color: hsl(0, 10%, 90%,.5);
+}
+
+.contact-form{
+  background-color: aliceblue;
+  padding: 30px 0px;
+  width: 90%;
+  margin: auto;
+  border-radius: 20px;
+  color: black;
+}
+.contact-name-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-name,
+.contact-email,
+.contact-message{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 26px;
+}
+
+.contact-name input{
+  width: 350px;
+  height: 30px;
+}
+.contact-email input{
+  height: 30px;
+}
+.contact-message textarea{
+  min-height: 100px;
+}
+.contact-submit{
+  width: 100%;
+  margin: 10px 0;
+}
+.contact-form input,
+.contact-form textarea{
+  font-size: 20px;
+  border-radius: 10px;
+  border: solid rgb(132, 132, 132) 1px;
+  background-color: transparent;
+  color: hsl(0, 8%, 35%);
+  padding: 5px;
+}

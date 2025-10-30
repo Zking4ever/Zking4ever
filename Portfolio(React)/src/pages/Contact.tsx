@@ -9,8 +9,8 @@ const Contact: React.FC = () => {
             <ContactForm />
             <div className="contact-info">
                 <h2>Additional Contact Information</h2>
-                <p>Email: example@example.com</p>
-                <p>Phone: (123) 456-7890</p>
+                <p>Email: yanosastawus@gmail.com</p>
+                <p>Phone: (+251) 904-783648</p>
             </div>
         </div>
     );

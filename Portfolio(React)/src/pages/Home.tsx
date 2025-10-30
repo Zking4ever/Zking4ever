@@ -17,8 +17,8 @@ const Home = (props) => {
                     <p> A software developer with a passion for creating interactive and user-friendly applications. 
                          and get to know more about my work.
                     </p>
-                    <button onClick={handleNavigatorClick} id='projects'>Explore projects</button>
-                    <button onClick={handleNavigatorClick} id='contact'>Get in touch</button>
+                    <button onClick={handleNavigatorClick} id='projects'>View My Work</button>
+                    <button onClick={handleNavigatorClick} id='contact'>Get In Touch</button>
                 </section>
                 <section className='profile-section'>
                     <img src={profile} alt="profile" />
