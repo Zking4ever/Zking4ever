@@ -4,12 +4,10 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 
 
-function Pages(props){
-        const currentPage = props.currentPage;
-        const handleNavigatorClick = props.clickHandler;
-    
+function Pages({currentPage,clickHandler}: {currentPage:string,clickHandler: (x:string)=>void}) {
+      
         switch (currentPage) {
-            case "home": return(<Home clickHandler={handleNavigatorClick}/>);
+            case "home": return(<Home clickHandler={clickHandler}/>);
             case "about": return(<About />);
             case "projects": return(<Projects />);
             case "contact": return(<Contact />);

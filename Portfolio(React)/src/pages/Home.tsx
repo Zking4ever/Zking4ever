@@ -1,8 +1,7 @@
 import Footer from '../components/Footer';
 import profile from "../assets/user.png";
 
-const Home = (props) => {
-    const handleNavigatorClick = props.clickHandler;
+const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
     
     document.title = 'home';
     return (
@@ -17,8 +16,8 @@ const Home = (props) => {
                     <p> A software developer with a passion for creating interactive and user-friendly applications. 
                          and get to know more about my work.
                     </p>
-                    <button onClick={handleNavigatorClick} id='projects'>View My Work</button>
-                    <button onClick={handleNavigatorClick} id='contact'>Get In Touch</button>
+                    <button onClick={()=>clickHandler('projects')} id='projects'>View My Work</button>
+                    <button onClick={()=>clickHandler('contact')} id='contact'>Get In Touch</button>
                 </section>
                 <section className='profile-section'>
                     <img src={profile} alt="profile" />

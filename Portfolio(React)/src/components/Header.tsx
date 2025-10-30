@@ -1,6 +1,4 @@
 import React from 'react';
-const projecst = '../pages/Projects.jsx'
-
 
 interface HeaderProps {
   navLinks: { name: string; href: string }[];

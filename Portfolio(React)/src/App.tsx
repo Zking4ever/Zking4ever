@@ -18,7 +18,7 @@ function App() {
         <div className='header'>
             <div className="logo">AS</div>
             <nav>
-              <div className="glass" page={currentPage}>
+              <div className="glass" data-page={currentPage}>
                 {/*for the background glass moving around the header to identify current page */}
               </div>
                 <span className='navigator' onClick={()=>handleNavigatorClick('home')}>Home</span>
