@@ -10,14 +10,21 @@ function App() {
   function handleNavigatorClick(x:string){
       setCurrentPage(x);
   }
-  useEffect(()=>{
-    var underConstruction = document.createElement("div");
-    underConstruction.className = "under-construction";
-    underConstruction.innerHTML = "<h3>🚧 Under Construction 🚧</h3><p>This portfolio website is currently under construction. Please check back later for the full experience!</p>";
-    document.body.appendChild(underConstruction);
-    return ()=>{
+  function UnderConstruction(){
+        var underConstruction = document.createElement("div");
+        underConstruction.className = "under-construction";
+        underConstruction.innerHTML = "<h3>🚧 Under Construction 🚧</h3><p>This portfolio website is currently under construction. Please check back later for the full experience!</p>";
+        document.body.appendChild(underConstruction);
+  }
+  function ConstructionRemover(){
+      var underConstruction = document.createElement("div");
       document.body.removeChild(underConstruction);
     }
+  useEffect(()=>{
+
+      //UnderConstruction()
+
+    return ()=>ConstructionRemover;
   });
 
   return (

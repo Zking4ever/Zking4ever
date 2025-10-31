@@ -156,21 +156,28 @@
     border-radius: 50% 30%;
 }
 
+/* Project Section */
+
+.projects-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .project-card{
-  width: 300px;
   margin: 10px;
   color: black;
-  background-color: aliceblue;
-  border: solid transparent;
-  border-radius: 10px;
-  display: inline-block;
+  display: flex;
+  gap: 10px;
 }
 .project-picture{
+  width: 200px;
+  aspect-ratio: 1;
   overflow: hidden;
+  border-radius: 10px;
+  background-color: aliceblue;
 }
 .project-picture img{
   width: 100%;
-  max-height: 180px;
   object-fit: cover;
   border-radius: 10px;
   transition: all .3s ease;
@@ -180,8 +187,11 @@
   filter: brightness(70%);
 }
 .project-info {
-  padding: 5px 20px;
+  width: 400px;
+  padding: 5px 10px;
   text-align: left;
+  border-radius: 10px;
+  background-color: aliceblue;
 }
 .project-title{
   margin: 5px 0;
@@ -208,7 +218,7 @@
   gap: 10px;
 }
 .project-buttons a{
-  font-size: 20px;
+  font-size: 14px;
   color: black;
   border: solid black 1px;
   padding: 5px 20px;
@@ -225,6 +235,8 @@
 .project-buttons a:hover:not(:last-of-type){
   background-color: hsl(0, 10%, 90%,.5);
 }
+
+/* Contact section css */
 
 .contact-form{
   background-color: aliceblue;

@@ -15,7 +15,7 @@ const projects = [
     },
     {
         title: 'Project Three',
-        description: 'This is a brief description of Project Three.',
+        description: 'This is a brief description of Project Three. loremdfdjhvbjb j  This is a brief description of Project Three.This is a brief description of Project Three.',
         link: 'https://github.com/user/project-three',
         tools: ['React', 'TypeScript', 'CSS']
     }
