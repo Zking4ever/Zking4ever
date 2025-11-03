@@ -3,7 +3,6 @@ import profile from "../assets/user.png";
 
 const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
     
-    document.title = 'home';
     return (
         <>
             <div className='home'>

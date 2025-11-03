@@ -150,55 +150,21 @@
     aspect-ratio: 1;
 }
 
+/* Contact Page */
 
-/* Contact section css */
-
-.contact-form{
-  background-color: aliceblue;
-  padding: 30px 0px;
-  width: 90%;
-  margin: auto;
-  border-radius: 20px;
-  color: black;
-}
-.contact-name-container{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.contact-name,
-.contact-email,
-.contact-message{
-  text-align: left;
+.socials{
+  width: fit-content;
+  border: 1px solid gray;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  font-size: 26px;
+}
+.socials *:hover{
+  cursor: pointer;
+  transform-origin: 50% 50%;
+  transform: scale(1.1);
 }
 
-.contact-name input{
-  width: 350px;
-  height: 30px;
-}
-.contact-email input{
-  height: 30px;
-}
-.contact-message textarea{
-  min-height: 100px;
-}
-.contact-submit{
-  width: 100%;
-  margin: 10px 0;
-}
-.contact-form input,
-.contact-form textarea{
-  font-size: 20px;
-  border-radius: 10px;
-  border: solid rgb(132, 132, 132) 1px;
-  background-color: transparent;
-  color: hsl(0, 8%, 35%);
-  padding: 5px;
-}
 @media (max-width:760px) {
   .wrapper{
     width: 100vw;

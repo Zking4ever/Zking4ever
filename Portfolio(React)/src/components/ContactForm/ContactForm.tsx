@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ContactForm.css'
 
 const ContactForm: React.FC = () => {
     const [firstName, setFirstName] = useState('');
@@ -26,7 +27,6 @@ const ContactForm: React.FC = () => {
 
     return (
         <div className="contact-form">
-            <h2>Contact Me</h2>
             {success && <p className="success-message">Your message has been sent!</p>}
             {error && <p className="error-message">{error}</p>}
             <form onSubmit={handleSubmit} className='contact-form'>
