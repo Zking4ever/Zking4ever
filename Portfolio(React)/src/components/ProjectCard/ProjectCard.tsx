@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiGithub } from "react-icons/fi";
 import { IoOpenOutline } from "react-icons/io5";
+import './ProjectCard.css';
 
 interface ProjectCardProps {
     title: string;
@@ -12,23 +13,29 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link,tools }) => {
     return (
         <div className="project-card">
+            {/* first box for project logo or mockup */}
             <div className="project-picture">
                 <img src={`https://avatar.iran.liara.run/username?username=`+title} alt="project-pic" />
             </div>
+            {/* Connecting line between two boxes when hovered */}
+            <div className="project-box-connect"></div>
+            {/* Second box for important information */}
             <div className="project-info">
-                <h3 className="project-title">{title}</h3>
+                <p className="project-title">{title}</p>
                 <p className="project-description">{description}</p>
+                {/* What tools used in the project */}
                 <div className="project-tools">
                     {tools && tools.map((tool, index) => (
                         <span key={index} className="tool">{tool}</span>
                     ))}
                 </div>
+                {/* Call to Action Buttons */}
                 <div className='project-buttons'>
                     <a href={link} className="project-link" target="_blank" rel="noopener noreferrer">
-                        <FiGithub /> <span>Code</span>
+                        <FiGithub /> <span>Source Code</span>
                     </a>
                     <a href={link} className="project-link" target="_blank" rel="noopener noreferrer">
-                        <IoOpenOutline /><span>Demo</span>
+                        <IoOpenOutline /><span>View Live</span>
                     </a>
                 </div>
             </div>

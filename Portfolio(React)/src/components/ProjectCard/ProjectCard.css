@@ -1,0 +1,145 @@
+/* Project Section */
+
+.projects-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-catagory-title{
+  margin: 0;
+  transform: translateX(-200px);
+}
+.project-card{
+  display: flex;
+  gap: 3px;
+  cursor: pointer;
+}
+.project-picture{
+  width: 210px;
+  height: 210px;
+  overflow: hidden;
+  border: 1px solid rgba(128, 128, 128, 0.728);
+  background-color: aliceblue;
+  z-index: 1;
+}
+.project-picture img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all .3s ease;
+}
+
+.project-box-connect{
+    height: 50px;
+    align-self: center;
+    border: 1px dashed;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+.project-info {
+  width: 400px;
+  min-height: 200px;
+  height: fit-content;
+  padding: 5px 10px;
+  text-align: left;
+  border: 1px solid rgba(128, 128, 128, 0.728);
+  background-color: aliceblue;
+  position: relative;
+}
+.project-title{
+  margin: 2px 0;
+  font-weight: 450;
+}
+.project-description{
+  margin: 0;
+  color: hsl(0, 8%, 35%);
+  font-size: medium;
+  margin-bottom: 45px;
+}
+.project-tools{
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  background-color: aliceblue;
+  border: 1px solid rgba(128, 128, 128, 0.728);
+  border-radius: 10px;
+}
+.tool{
+  padding: 3px 10px;
+  font-size: small;
+  display: inline-block;
+  margin: 3px;
+  border-right: 1px dashed gray;
+}
+.tool:last-of-type{
+    border: none;
+}
+.project-buttons{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+.project-buttons a{
+    padding: 5px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.728);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* When hovered giving stronger border */
+.project-card:hover .project-picture,
+.project-card:hover .project-info,
+.project-card:hover .project-tools{
+    border: 1px solid;
+}
+.project-card:hover .project-picture img{
+  transform: scale(1.15);
+}
+.project-card:hover .project-box-connect{
+    opacity: 1;
+}
+
+.connect-line{
+  border:  1px dashed black;
+  height: 30px;
+  transform: translateX(-250px);
+}
+
+
+@media (max-width:760px) {
+    .project-catagory-title{
+        transform: translateX(-33%);
+    }
+    .project-card{
+        width: 90%;
+        flex-direction: column;
+        gap: 0;
+    }
+    .project-info{
+        width: 90%;
+    }
+    .project-picture{
+        width: 93%;
+    }
+    .project-box-connect{
+        height: 3px;
+        transform: rotate(0deg) translateX(-145px);
+    }
+    .project-tools{
+        z-index: 2;
+        top: -20px;
+    }
+    .connect-line{
+        transform: translateX(-150px);
+    }
+   
+}
+
+@media (max-width:500px) {
+     .project-picture{
+        width: 95%;
+    }
+}

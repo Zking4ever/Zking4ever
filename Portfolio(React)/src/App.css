@@ -40,8 +40,6 @@
 .wrapper{
   width: 1000px;
   min-height: 98vh;
-  background-color: black;
-  border-radius: 20px;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -59,6 +57,7 @@
   backdrop-filter: blur(500px);
   border-radius: 30px;
   position: fixed;
+  z-index: 1000;
 }
 .header nav{
   width: 50%;
@@ -98,9 +97,6 @@
 .content{
   width: 100%;
   flex: 1;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-color: rgb(85, 120, 120);
   padding-top: 50px;
 }
 .home{
@@ -154,93 +150,6 @@
     aspect-ratio: 1;
 }
 
-/* Project Section */
-
-.projects-list{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.project-catagory-title{
-  margin: 0;
-  transform: translateX(-200px);
-}
-.project-card{
-  color: black;
-  display: flex;
-  gap: 10px;
-}
-.project-picture{
-  width: 200px;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border-radius: 10px;
-  background-color: aliceblue;
-}
-.project-picture img{
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: all .3s ease;
-}
-.project-picture img:hover{
-  transform: scale(1.1);
-  filter: brightness(70%);
-}
-.project-info {
-  width: 400px;
-  padding: 5px 10px;
-  text-align: left;
-  border-radius: 10px;
-  background-color: aliceblue;
-}
-.project-title{
-  margin: 5px 0;
-  font-size: x-large;
-}
-.project-description{
-  margin: 0;
-  color: hsl(0, 8%, 35%);
-  font-size: medium;
-}
-.project-tools{
-  margin: 15px 0;
-}
-.tool{
-  background-color: hsl(0, 10%, 90%,.5);
-  padding: 3px 10px;
-  border-radius: 10px;
-  font-size: small;
-  display: inline-block;
-  margin: 3px;
-}
-.project-buttons{
-  display: flex;
-  gap: 10px;
-}
-.project-buttons a{
-  font-size: 14px;
-  color: black;
-  border: solid black 1px;
-  padding: 5px 20px;
-  border-radius: 10px;
-  transition: all .3s ease;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-.project-buttons a:last-of-type{
-  background-color: hsl(0, 68%, 5%);
-  color: white;
-}
-.project-buttons a:hover:not(:last-of-type){
-  background-color: hsl(0, 10%, 90%,.5);
-}
-.connect-line{
-  border:  1px dashed black;
-  height: 30px;
-  transform: translateX(-250px);
-}
 
 /* Contact section css */
 
