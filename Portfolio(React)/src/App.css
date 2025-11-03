@@ -151,7 +151,19 @@
 }
 
 /* Contact Page */
-
+.contact-page-box{
+  display:flex;
+}
+.form-container{
+  flex:1;
+  margin-right: 20px;
+}
+.socials-container{
+  flex:.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .socials{
   width: fit-content;
   border: 1px solid gray;
@@ -167,7 +179,7 @@
 
 @media (max-width:760px) {
   .wrapper{
-    width: 100vw;
+    width: 95vw;
     border-radius: 0;
   }
   .header{
@@ -180,5 +192,21 @@
   .content{
     padding: 0;
     border-radius: 0;
+  }
+  .contact-page-box{
+    flex-direction: column-reverse;
+  }
+  .socials-container{
+    width: 90%;
+    margin: auto;
+    flex:.1;
+    margin-bottom: 10px;
+    flex-direction: column-reverse;
+  }
+  .socials{
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

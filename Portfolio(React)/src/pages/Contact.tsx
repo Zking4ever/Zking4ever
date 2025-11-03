@@ -15,12 +15,12 @@ const Contact: React.FC = () => {
     return (
         <div className="contact-page">
             <h1>Contact Me</h1>
-            <div style={{display:'flex'}}>
-                <div style={{flex:1}}>
+            <div className='contact-page-box'>
+                <div className='form-container'>
                     <p>If you have any questions or would like to get in touch, please fill out the form below:</p>
                     <ContactForm />
                 </div>
-                <div style={{flex:.2,display:'flex',flexDirection:'column',alignItems:'center'}}>
+                <div className="socials-container">
                     <h4>Or</h4>
                     <div className="socials">
                         <LiaTelegramPlane size={40} style={{margin:'10px'}} onClick={()=>window.open('https://t.me/astawus12','_blank')}/>
