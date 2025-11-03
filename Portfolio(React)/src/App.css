@@ -150,10 +150,8 @@
 }
 
 .profile-section img{
-    width: 300px;
-    padding: 20px;
-    background-color: aqua;
-    border-radius: 50% 30%;
+    width: 350px;
+    aspect-ratio: 1;
 }
 
 /* Project Section */
@@ -163,8 +161,11 @@
   flex-direction: column;
   align-items: center;
 }
+.project-catagory-title{
+  margin: 0;
+  transform: translateX(-200px);
+}
 .project-card{
-  margin: 10px;
   color: black;
   display: flex;
   gap: 10px;
@@ -235,6 +236,11 @@
 .project-buttons a:hover:not(:last-of-type){
   background-color: hsl(0, 10%, 90%,.5);
 }
+.connect-line{
+  border:  1px dashed black;
+  height: 30px;
+  transform: translateX(-250px);
+}
 
 /* Contact section css */
 
@@ -283,4 +289,21 @@
   background-color: transparent;
   color: hsl(0, 8%, 35%);
   padding: 5px;
+}
+@media (max-width:760px) {
+  .wrapper{
+    width: 100vw;
+    border-radius: 0;
+  }
+  .header{
+    width: 90%;
+    height: 3em;
+    margin: auto;
+    border-radius: 10px;
+    position: absolute;
+  }
+  .content{
+    padding: 0;
+    border-radius: 0;
+  }
 }
