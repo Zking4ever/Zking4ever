@@ -159,7 +159,7 @@
   margin-right: 20px;
 }
 .socials-container{
-  flex:.2;
+  flex: 0.1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,19 +183,40 @@
     border-radius: 0;
   }
   .header{
-    width: 90%;
+    width: 95%;
     height: 3em;
     margin: auto;
     border-radius: 10px;
     position: absolute;
+    justify-content: space-between;
+  }
+  .header nav{
+    width: 70%;
+  }
+  .header nav .glass{
+    width: 70px;
+    height: 2.5em;
+  }
+  .glass[data-page=home]{
+      transform: translateX(-153%);
+    }
+  .glass[data-page=about]{
+    transform: translateX(-60%);
+  }
+  .glass[data-page=projects]{
+    transform: translateX(34%);
+  }
+  .glass[data-page=contact]{
+    transform: translateX(137%);
   }
   .content{
     padding: 0;
-    border-radius: 0;
+    margin-top: 30px;    
   }
   .contact-page-box{
     flex-direction: column-reverse;
   }
+  
   .socials-container{
     width: 90%;
     margin: auto;

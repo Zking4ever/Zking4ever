@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IoIosClose } from "react-icons/io";
 import './ContactForm.css'
 
 const ContactForm: React.FC = () => {
@@ -26,9 +27,9 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <div className="contact-form">
-            {success && <p className="success-message">Your message has been sent!</p>}
-            {error && <p className="error-message">{error}</p>}
+        <div>
+            {success && <p className="success-message">Your message has been sent! <IoIosClose size={30} onClick={()=>setSuccess(prev=>(!prev))} style={{padding:10,color:'red',position:'absolute',right:20,top:'50%',transform:'translateY(-50%)',cursor:'pointer'}}/></p>}
+            {error && <p className="error-message">{error} <IoIosClose size={30} onClick={()=>setError('')} style={{padding:10,color:'red',position:'absolute',right:20,top:'50%',transform:'translateY(-50%)',cursor:'pointer'}}/></p>}
             <form onSubmit={handleSubmit} className='contact-form'>
                 <div className='contact-name-container'>
                     <div className='contact-name'>

@@ -42,7 +42,6 @@ function App() {
                 <span className='navigator' onClick={()=>handleNavigatorClick('projects')}>Projects</span>
                 <span className='navigator' onClick={()=>handleNavigatorClick('contact')}>Contact</span>
             </nav>
-            <div className="socials">Socials</div>
         </div>
         <div className="content">
             <Pages currentPage={currentPage} clickHandler={handleNavigatorClick} />

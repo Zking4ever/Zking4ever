@@ -1,4 +1,28 @@
 /* Contact form css */
+.success-message{
+  background-color: hsl(120, 100%, 45%);
+  color: white;
+  font-size: 20px;
+  padding: 6px 20px;
+  text-align: center;
+  border-left: solid black;
+  border-radius:0 10px 10px 0;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.error-message{
+  background-color: hsl(0, 100%, 45%);
+  color: white;
+  font-size: 20px;
+  padding: 6px 20px;
+  text-align: center;
+  border-left: solid black;
+  border-radius:0 10px 10px 0;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
 .contact-form{
   background-color: aliceblue;
   padding: 30px 10px;
