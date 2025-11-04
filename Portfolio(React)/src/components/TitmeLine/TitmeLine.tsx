@@ -1,6 +1,6 @@
 import './TitmeLine.css'
 
-function TimeLine({time,content}){
+function TimeLine({time,content}:{time:string,content:string}) {
     return (
                <>
                <div className="timeline">
