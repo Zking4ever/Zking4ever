@@ -1,4 +1,3 @@
-import Footer from '../components/Footer';
 import profile from "../assets/user.png";
 
 const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
@@ -22,7 +21,6 @@ const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
                     <img src={profile} alt="profile" />
                 </section>
             </div>
-            <Footer />
         </>
     );
 };

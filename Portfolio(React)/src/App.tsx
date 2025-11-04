@@ -1,5 +1,6 @@
 import './App.css'
 import Pages from './pages/Pages'
+import Footer from './components/Footer';
 import { useState,useEffect } from 'react'
 
 
@@ -22,9 +23,9 @@ function App() {
     }
   useEffect(()=>{
 
-      UnderConstruction()
+      //UnderConstruction()
 
-    return ()=>ConstructionRemover;
+    //return ConstructionRemover;
   });
 
   return (
@@ -45,8 +46,8 @@ function App() {
         </div>
         <div className="content">
             <Pages currentPage={currentPage} clickHandler={handleNavigatorClick} />
+            <Footer />
         </div>
-        
       </div>
     </>
   )
