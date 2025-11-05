@@ -47,7 +47,6 @@ const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
                         <span className="home-title">What I Use to Build Stuff</span>
                         <p className="home-title-desc">Here are the powerful tools and technologies I use to bring your ideas to life. From front-end frameworks to back-end systems, I create seamless, scalable solutions tailored to your needs, delivering high-quality results with lasting impact.</p>
                     </div>
-                    <marquee direction="right" className="marquee">
                     <div>
                         <div className="tools-container">
                             <div className="tool">HTML5</div>
@@ -62,7 +61,6 @@ const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
                             <div className="tool">Figma</div>
                         </div>
                     </div>
-                    </marquee>
             </section>
             <section>
                     <div>
