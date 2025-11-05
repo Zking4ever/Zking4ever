@@ -21,12 +21,12 @@ function App() {
       var underConstruction = document.createElement("div");
       document.body.removeChild(underConstruction);
     }
-  useEffect(()=>{
+  //useEffect(()=>{
 
       //UnderConstruction()
 
    // return ()=>{ConstructionRemover};
-  });
+  //});
 
   return (
     <>
