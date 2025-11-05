@@ -23,9 +23,9 @@ function App() {
     }
   useEffect(()=>{
 
-      UnderConstruction()
+      //UnderConstruction()
 
-    return ()=>{ConstructionRemover};
+   // return ()=>{ConstructionRemover};
   });
 
   return (
