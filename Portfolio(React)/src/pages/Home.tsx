@@ -6,8 +6,8 @@ const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
         <>
             <section className='home'>
                 <div className="name">
-                    <h4 className='greet'>Hey<div className="shakeHand">👋</div></h4>
-                    <h2><a href='https://google.com/astawus amsalu'>I'm Astawus Amsalu</a></h2>
+                    <h4 className='greet'>Hey<div className="shakeHand">👋</div> I'm </h4>
+                    <h2><a href='https://google.com/astawus amsalu'>Astawus Amsalu</a></h2>
                 </div>
                 <div className='profile'>
                     <img src={profile} alt="profile image" />
@@ -37,6 +37,7 @@ const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
             <section>
                     <div>
                         <span className="home-title">What I Do</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path fill="var(--color1)" d="M450 65H130l-10-10h320l10 10zM870 65H550l10-10h320l-10 10zM500 15l35 35-35 35-35-35zM440 45H70l10-10h370l-10 10zM930 45H560l-10-10h370l10 10z"></path></svg>
                         <p className="home-title-desc">Here are all the services that i provide to my clients. I Hope I offer the service that you are looking for. If you do not find something that you are looking for than please send me an email.</p>
                     </div>
                     <div className="work-container">

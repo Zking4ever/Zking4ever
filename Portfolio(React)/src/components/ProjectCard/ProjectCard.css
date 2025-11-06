@@ -1,9 +1,14 @@
 /* Project Section */
+.projects-container{
+  width: 90%;
+  margin: 100px auto;
+}
 
 .projects-list{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 .project-catagory-title{
   margin: 0;
@@ -19,7 +24,7 @@
   height: 210px;
   overflow: hidden;
   border: 1px solid rgba(128, 128, 128, 0.728);
-  background-color: aliceblue;
+  background-color: var(--back3);
   z-index: 1;
 }
 .project-picture img{
@@ -43,7 +48,7 @@
   padding: 5px 10px;
   text-align: left;
   border: 1px solid rgba(128, 128, 128, 0.728);
-  background-color: aliceblue;
+  background-color: var(--back3);
   position: relative;
 }
 .project-title{
@@ -52,7 +57,7 @@
 }
 .project-description{
   margin: 0;
-  color: hsl(0, 8%, 35%);
+  color: var(--color3);
   font-size: medium;
   margin-bottom: 45px;
 }
@@ -60,7 +65,7 @@
   position: absolute;
   top: -15px;
   right: 10px;
-  background-color: aliceblue;
+  background-color: var(--back3);
   border: 1px solid rgba(128, 128, 128, 0.728);
   border-radius: 10px;
 }
@@ -103,7 +108,7 @@
 }
 
 .connect-line{
-  border:  1px dashed black;
+  border:  1px dashed var(--color1);
   height: 30px;
   transform: translateX(-250px);
 }
@@ -114,7 +119,7 @@
         transform: translateX(-170px);
     }
     .project-card{
-        width: 90%;
+        width: 100%;
         flex-direction: column;
         gap: 0;
     }

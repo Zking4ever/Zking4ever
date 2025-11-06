@@ -38,7 +38,7 @@
   text-align: center;
 }
 .wrapper{
-  width: 1000px;
+  width: 100vw;
   min-height: 98vh;
   display: flex;
   overflow: hidden;
@@ -61,57 +61,54 @@
 .header nav{
   width: 50%;
   display: flex;
-  justify-content: space-around;
-  color: black;
+  justify-content: space-between;
   position: relative;
 }
 .navigator{
   cursor: pointer;
+  flex: 1;
 }
 .glass{
-  width: 100px;
-  height: 3em;
+  width: 25%;
+  height: 2em;
   position: absolute;
   align-self: center;
   border-radius: 5px;
   z-index: -1;
+  background: var(--gradient1);
   transition: all .5s ease;
 }
-.glass[data-page=home]{
-  background-color: rgb(123, 164, 214);
-  transform: translateX(-155px);
-}
 .glass[data-page=about]{
-  background-color: green;
-  transform: translateX(-60%);
+  transform: translateX(100%);
 }
 .glass[data-page=projects]{
-  background-color: rgba(86, 64, 209, 0.699);
-  transform: translateX(40%);
+  transform: translateX(200%);
 }
 .glass[data-page=contact]{
-  background-color: rgb(0, 128, 102);
-  transform: translateX(147%);
+  transform: translateX(300%);
 }
 .content{
-  width: 100%;
-  flex: 1;
-  padding-top: 50px;
+  width: 80%;
 }
 .home{
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   padding: 60px 0px;
+  align-items: center;
+  gap: 20px;
+  background-image: url('./assets/mysvg.svg');
+  background-position: center;
 }
 .home .name{
-  transform: translateY(60px);
+  text-align: left;
 }
 .home .description{
-  transform: translateY(-250px);
+  transform: translateY(-150px);
+  text-align: left;
+  max-width: fit-content;
 }
-.profile{
-  font-size: 1em;
-  width: 33%;
+.home .profile{
+  transform: translate(30px, 100px);
 }
 .greet{
   margin: 0;
@@ -157,7 +154,7 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 5px;
   font-size: 30px;
   font-weight: bold;
@@ -191,32 +188,11 @@
 .btns{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 10px;
 }
 @media (max-width:760px) {
- .home{
-    display: flex;
-    gap: 5px;
-  }
-  .home .name{
-    transform: translateY(0);
-  }
-  .home .profile{
-    margin: 0;
-  }
-  .home .profile img{
-    width: 200px;
-  }
-  .home .description{
-    transform: translateY(-30px);
-  }
-  .intro .jobTitle-container{
-    height: 28px;
-  }
-  .intro .jobTitles{
-    font-size: 25px;
-  }
+ 
 }
 
 .profile img{
@@ -277,11 +253,6 @@
   height: 50px;
   background-color: gray;
 }
-@keyframes pause {
-  100%{
-    background-color: rebeccapurple;
-  }
-}
 @keyframes autoScroll {
   from{
     transform: translateX(0);
@@ -292,8 +263,11 @@
 }
 @media (max-width:760px) {
   .wrapper{
-    width: 100vw;
+    width: 95vw;
     border-radius: 0;
+  }
+  .content{
+    width: 100%;
   }
   .header{
     width: 95%;
@@ -307,25 +281,41 @@
     width: 70%;
   }
   .header nav .glass{
-    width: 70px;
-    height: 2.5em;
-  }
-  
-  .content{
-    padding: 0;
-    margin-top: 30px;    
+    height: 1.5em;
   }
   .home{
     flex-direction: column;
     align-items: center;
   }
-  .profile {
-    width: 90%;
-    margin-bottom: 20px;
+  .home{
+    display: flex;
+    gap: 5px;
   }
-  .profile img{
-    width: 100%;
-    max-width: 300px;
+  .home .name{
+    margin-top: 30px;
+    transform: translateY(0);
+    text-align: center;
+  }
+  .home .profile{
+    margin: 0;
+    transform: translateY(0);
+  }
+  .home .profile img{
+    width: 200px;
+  }
+  .home .description{
+    transform: translateY(-30px);
+    text-align: center;
+  }
+  .intro .jobTitle-container{
+    height: 28px;
+  }
+  .intro .jobTitles{
+    font-size: 25px;
+    align-items: center;
+  }
+  .btns{
+    justify-content: center;
   }
   .home-title-desc{
     font-size: 1rem;
@@ -367,10 +357,6 @@
 }
 
 @media (max-width:760px) {
-  .wrapper{
-    width: 95vw;
-    border-radius: 0;
-  }
   .header{
     width: 95%;
     height: 3em;
@@ -379,28 +365,9 @@
     position: absolute;
     justify-content: space-between;
   }
-  .header nav{
-    width: 70%;
-  }
-  .header nav .glass{
-    width: 70px;
-    height: 2.5em;
-  }
-  .glass[data-page=home]{
-      transform: translateX(-153%);
-    }
-  .glass[data-page=about]{
-    transform: translateX(-60%);
-  }
-  .glass[data-page=projects]{
-    transform: translateX(34%);
-  }
-  .glass[data-page=contact]{
-    transform: translateX(137%);
-  }
+  
   .content{
-    padding: 0;
-    margin-top: 30px;    
+    padding:  0;
   }
   .contact-page-box{
     flex-direction: column-reverse;
@@ -420,3 +387,4 @@
     justify-content: center;
   }
 }
+

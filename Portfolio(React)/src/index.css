@@ -2,10 +2,16 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --back2:azure;
+  --back3: #2b2b2b;
+  --color1:hsl(221, 29%, 89%);
+  --color2:#1a3d64;
+  --color3:#d4d4d4;
+  --gradient1: linear-gradient(90deg,#1f172b,#241422,#1f172b);
 
   color-scheme: light dark;
-  color: black;
-  background-color: white;
+  color: var(--color1);
+  background-color: var(--back1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
