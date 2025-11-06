@@ -53,8 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: hsla(0, 0%, 99%, 0.527);
-  backdrop-filter: blur(500px);
+  backdrop-filter: blur(20px);
   border-radius: 30px;
   position: fixed;
   z-index: 1000;
@@ -100,35 +99,53 @@
   padding-top: 50px;
 }
 .home{
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
   padding: 60px 0px;
 }
-.welcome-section,
-.profile-section {
+.home .name{
+  transform: translateY(60px);
+}
+.home .description{
+  transform: translateY(-250px);
+}
+.profile{
   font-size: 1em;
   width: 33%;
 }
 .greet{
-  display: flex;
-}
-.greet h1{
   margin: 0;
-  text-align: right;
 }
-.welcome-section h3,a{
+.shakeHand{
+    display: inline-block;
+    animation: shakeHand 1s ease infinite;
+    animation-timeline: View;
+    animation-delay: .2s;
+}
+@keyframes shakeHand {
+  25%{
+    transform: rotate(9deg);
+  }
+  75%{
+    transform: rotate(-9deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+.home h2,a{
   margin: 0;
-  text-align: center;
   color: inherit;
   transition: all .5s ease;
 }
-.welcome-section a:hover{
+.home a:hover{
   letter-spacing: 3px;
   color: inherit;
 }
-.welcome-section .intro{
+.intro{
   font-size: 1.2rem;
-  margin: 20px 0;
+  max-width: 500px;
+  margin:20px auto;
 }
 .intro .jobTitle-container{
   width: 100%;
@@ -171,7 +188,29 @@
     transform: translateY(-5%);
   }
 }
-@media (max-width:350px) {
+.btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width:760px) {
+ .home{
+    display: flex;
+    gap: 5px;
+  }
+  .home .name{
+    transform: translateY(0);
+  }
+  .home .profile{
+    margin: 0;
+  }
+  .home .profile img{
+    width: 200px;
+  }
+  .home .description{
+    transform: translateY(-30px);
+  }
   .intro .jobTitle-container{
     height: 28px;
   }
@@ -179,26 +218,8 @@
     font-size: 25px;
   }
 }
-.greet h1:last-of-type{
-    font-size: 4rem;
-    padding: 10px 0;
-    animation: shakeHand 1s ease;
-    animation-timeline: View;
-    animation-delay: .2s;
-}
-@keyframes shakeHand {
-  25%{
-    transform: rotate(9deg);
-  }
-  75%{
-    transform: rotate(-9deg);
-  }
-  100%{
-    transform: rotate(0deg);
-  }
-}
 
-.profile-section img{
+.profile img{
     width: 350px;
     aspect-ratio: 1;
 }
@@ -208,6 +229,7 @@
 }
 .home-title-desc{
   font-size: 1.2rem;
+  padding: 5px;
   margin-top: 10px;
   color: rgb(96, 89, 89);
 }
@@ -224,6 +246,49 @@
   overflow: hidden;
   cursor: pointer;
   transition: all .3s ease;
+}
+.tools-container{
+  display: flex;
+}
+.tools{
+  display: flex;
+  gap: 15px;
+  animation: autoScroll 25s ease infinite;
+  margin-right: 15px;
+}
+.tools-container:hover > .tools{
+  cursor: pointer;
+  animation-play-state: paused;
+}
+.toolBox{
+  min-width: 80px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.logo{
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+}
+@keyframes pause {
+  100%{
+    background-color: rebeccapurple;
+  }
+}
+@keyframes autoScroll {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
 }
 @media (max-width:760px) {
   .wrapper{
@@ -254,12 +319,11 @@
     flex-direction: column;
     align-items: center;
   }
-  .welcome-section,
-  .profile-section {
+  .profile {
     width: 90%;
     margin-bottom: 20px;
   }
-  .profile-section img{
+  .profile img{
     width: 100%;
     max-width: 300px;
   }

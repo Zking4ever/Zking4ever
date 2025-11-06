@@ -31,7 +31,7 @@ const About = () => {
                          and get to know more about my work.
                     </p>
                 </section>
-                <section className='profile-section'>
+                <section className='profile'>
                     <img src={profile} alt="profile" />
                 </section>
             </div>
