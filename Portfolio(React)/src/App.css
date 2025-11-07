@@ -33,12 +33,10 @@
   }
 }
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
   text-align: center;
 }
 .wrapper{
-  width: 100vw;
+  width: 98vw;
   min-height: 98vh;
   display: flex;
   overflow: hidden;
@@ -91,13 +89,12 @@
   width: 80%;
 }
 .home{
+  height: 100vh;
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   padding: 60px 0px;
   align-items: center;
   gap: 20px;
-  background-image: url('./assets/mysvg.svg');
-  background-position: center;
 }
 .home .name{
   text-align: left;
@@ -108,7 +105,12 @@
   max-width: fit-content;
 }
 .home .profile{
+  border-radius: 10px;
   transform: translate(30px, 100px);
+}
+.profile img{
+    width: 350px;
+    aspect-ratio: 1;
 }
 .greet{
   margin: 0;
@@ -191,13 +193,17 @@
   justify-content: start;
   gap: 10px;
 }
-@media (max-width:760px) {
- 
-}
-
-.profile img{
-    width: 350px;
-    aspect-ratio: 1;
+.background-svg{
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 120vw;
+  height: 100vh;
+  scale: .9;
+  transform: translateY(-10%);
+  background-image: url('./assets/mysvg.svg');
+  background-size: cover;
+  z-index: -1;
 }
 .home-title{
   font-size: 1.5rem;
@@ -223,36 +229,7 @@
   cursor: pointer;
   transition: all .3s ease;
 }
-.tools-container{
-  display: flex;
-}
-.tools{
-  display: flex;
-  gap: 15px;
-  animation: autoScroll 25s ease infinite;
-  margin-right: 15px;
-}
-.tools-container:hover > .tools{
-  cursor: pointer;
-  animation-play-state: paused;
-}
-.toolBox{
-  min-width: 80px;
-  aspect-ratio: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 5px 10px;
-  border: 1px solid gray;
-  border-radius: 10px;
-}
-.logo{
-  width: 50px;
-  height: 50px;
-  background-color: gray;
-}
+
 @keyframes autoScroll {
   from{
     transform: translateX(0);
@@ -289,6 +266,7 @@
   }
   .home{
     display: flex;
+    justify-content: center;
     gap: 5px;
   }
   .home .name{
@@ -298,6 +276,7 @@
   }
   .home .profile{
     margin: 0;
+    display: none;
     transform: translateY(0);
   }
   .home .profile img{
@@ -316,6 +295,12 @@
   }
   .btns{
     justify-content: center;
+  }
+  .background-svg{
+    left: -7%;
+    background-position-x: right;
+    background-size: 170%;
+    background-repeat: no-repeat;
   }
   .home-title-desc{
     font-size: 1rem;
@@ -365,14 +350,12 @@
     position: absolute;
     justify-content: space-between;
   }
-  
   .content{
     padding:  0;
   }
   .contact-page-box{
     flex-direction: column-reverse;
   }
-  
   .socials-container{
     width: 90%;
     margin: auto;

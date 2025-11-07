@@ -1,5 +1,5 @@
 import profile from "../assets/user.png";
-import TimeLine from '../components/TitmeLine/TitmeLine';
+import TimeLine from '../components/UI/TitmeLine/TitmeLine';
 
 const About = () => {
     

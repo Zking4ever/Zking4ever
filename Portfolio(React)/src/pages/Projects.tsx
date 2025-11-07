@@ -1,4 +1,4 @@
-import ProjectCard from '../components/ProjectCard/ProjectCard';
+import ProjectCard from '../components/UI/ProjectCard/ProjectCard';
 
 const projectsList = {
     "projectCatagory":"Web DEVELOPMENT",
@@ -26,8 +26,6 @@ const projectsList = {
 
 const Projects = () => {
     
-    document.title = 'projects';
-
     return (
         <div className="projects-container">
             <h1>Featured Projects</h1>

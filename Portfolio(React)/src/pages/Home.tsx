@@ -1,4 +1,8 @@
 import profile from "../assets/user.png";
+// importing tools icon
+import Tools from "../components/UI/ToolList/Tools";
+//importing colorful icon
+
 
 const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
     
@@ -13,7 +17,7 @@ const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
                     <img src={profile} alt="profile image" />
                 </div>
                 <div className="description">
-                    <p className="intro"> A passionate 
+                    <div className="intro"> A passionate 
                         <div aria-hidden className='jobTitle-container'>
                             <div className="jobTitles">
                             <span>Full Stack Developer</span>
@@ -27,11 +31,15 @@ const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
                             </div>
                         </div>
                         obssesed in creating interactive and user-friendly websites/applications. 
-                    </p>
+                    </div>
                     <div className="btns">
                         <button onClick={()=>clickHandler('projects')} id='projects'>View My Work</button>
                         <button onClick={()=>clickHandler('contact')} id='contact'>Get In Touch</button>
                     </div>
+                </div>
+                {/* Background texture svg */}
+                <div className="background-svg">
+
                 </div>
             </section>
             <section>
@@ -60,72 +68,7 @@ const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
                         <span className="home-title">What I Use to Build Stuff</span>
                         <p className="home-title-desc">Here are the powerful tools and technologies I use to bring your ideas to life. From front-end frameworks to back-end systems, I create seamless, scalable solutions tailored to your needs, delivering high-quality results with lasting impact.</p>
                     </div>
-                    <div className="tools-container">
-                        <div className="tools">
-                            <div className="toolBox">
-                                <div className="logo"></div><span>HTML5</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>CSS3</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>JavaScript</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>TypeScript</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>React</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>Node.js</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>Express.js</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>MongoDB</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>Git & GitHub</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>Figma</span>
-                            </div>
-                        </div>
-                        <div aria-hidden className="tools">
-                            <div className="toolBox">
-                                <div className="logo"></div><span>HTML5</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>CSS3</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>JavaScript</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>TypeScript</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>React</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>Node.js</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>Express.js</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>MongoDB</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>Git & GitHub</span>
-                            </div>
-                            <div className="toolBox">
-                                <div className="logo"></div><span>Figma</span>
-                            </div>
-                        </div>
-                    </div>
+                    <Tools />
             </section>
             <section>
                     <div>

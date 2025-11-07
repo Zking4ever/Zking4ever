@@ -10,8 +10,6 @@
   --gradient1: linear-gradient(90deg,#1f172b,#241422,#1f172b);
 
   color-scheme: light dark;
-  color: var(--color1);
-  background-color: var(--back1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

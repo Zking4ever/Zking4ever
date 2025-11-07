@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from '../components/ContactForm/ContactForm';
+import ContactForm from '../components/UI/ContactForm/ContactForm';
 import { LiaTelegramPlane } from "react-icons/lia";
 import { FaInstagram } from "react-icons/fa";
 import { LuFacebook } from "react-icons/lu";
