@@ -9,11 +9,13 @@ import { MdOutlineEmail } from "react-icons/md";
 import { LuYoutube } from "react-icons/lu";
 import { FaXTwitter } from "react-icons/fa6";
 import { LiaDiscord } from "react-icons/lia";
+import Header from '../components/Header';
 
 
 const Contact: React.FC = () => {
     return (
         <div className="contact-page">
+            <Header/>
             <h1>Contact Me</h1>
             <div className='contact-page-box'>
                 <div className='form-container'>

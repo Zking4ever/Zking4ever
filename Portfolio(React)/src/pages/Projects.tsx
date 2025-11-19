@@ -1,3 +1,4 @@
+import Header from '../components/Header';
 import ProjectCard from '../components/UI/ProjectCard/ProjectCard';
 
 const projectsList = {
@@ -27,6 +28,8 @@ const projectsList = {
 const Projects = () => {
     
     return (
+        <>
+        <Header />
         <div className="projects-container">
             <h1>Featured Projects</h1>
             <div className="projects-list">
@@ -45,6 +48,7 @@ const Projects = () => {
                 ))}
             </div>
         </div>
+        </>
     );
 };
 

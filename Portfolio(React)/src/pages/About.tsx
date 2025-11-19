@@ -1,4 +1,5 @@
 import profile from "../assets/user.png";
+import Header from "../components/Header";
 import TimeLine from '../components/UI/TitmeLine/TitmeLine';
 
 const About = () => {
@@ -24,8 +25,9 @@ const About = () => {
 
     return (
         <>
+            <Header />
             <div className='home'>
-                <section className="welcome-section">
+                <section style={{textAlign:'left'}}>
                     <h1>About</h1>
                     <p> 
                         Do you remember the day you said "Ohh..I'm born for this" for the first time? you might have said it a lot:)

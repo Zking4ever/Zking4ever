@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
 import profile from "../assets/user.png";
+import Header from '../components/Header'
 // importing tools icon
 import Tools from "../components/UI/ToolList/Tools";
 //importing colorful icon
 
 
-const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
+const Home = () => {
     
     return (
         <>
+            <Header />
             <section className='home'>
                 <div className="name">
                     <h4 className='greet'>Hey<div className="shakeHand">👋</div> I'm </h4>
@@ -33,8 +36,8 @@ const Home = ({clickHandler}: {clickHandler:(x:string)=>void}) => {
                         obssesed in creating interactive and user-friendly websites/applications. 
                     </div>
                     <div className="btns">
-                        <button onClick={()=>clickHandler('projects')} id='projects'>View My Work</button>
-                        <button onClick={()=>clickHandler('contact')} id='contact'>Get In Touch</button>
+                        <Link to="/projects"><button>View My Work</button></Link>
+                        <Link to="/contact"><button>Get In Touch</button></Link>
                     </div>
                 </div>
                 {/* Background texture svg */}
