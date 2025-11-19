@@ -52,7 +52,7 @@ const About = () => {
             <h1 style={{textAlign:'left'}}>Education</h1>
             {
                 Education.map((educationData)=>(
-                    <TimeLine time={educationData.time} content={educationData.content}/>
+                    <TimeLine time={educationData.time} content={educationData.content} key={educationData.time}/>
                 ))
             }
         </>
