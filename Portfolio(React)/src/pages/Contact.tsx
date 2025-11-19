@@ -14,8 +14,9 @@ import Header from '../components/Header';
 
 const Contact: React.FC = () => {
     return (
+        <>
+        <Header/>
         <div className="contact-page">
-            <Header/>
             <h1>Contact Me</h1>
             <div className='contact-page-box'>
                 <div className='form-container'>
@@ -38,6 +39,7 @@ const Contact: React.FC = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

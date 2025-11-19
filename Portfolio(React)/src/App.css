@@ -293,6 +293,9 @@
 }
 
 /* Contact Page */
+.contact-page{
+  padding: 60px 0px;
+}
 .contact-page-box{
   display:flex;
 }
@@ -349,3 +352,16 @@
   }
 }
 
+.blog-page{
+  padding: 60px 0px;
+  padding-top: 20vh;
+}
+.blog-page-title{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.blog-cards-container{
+  gap: 20px;
+  width: 100vw;
+}
