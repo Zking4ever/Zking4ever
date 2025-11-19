@@ -3,7 +3,6 @@
   width: 90%;
   margin: 100px auto;
 }
-
 .projects-list{
   display: flex;
   flex-direction: column;
@@ -121,6 +120,7 @@
     .project-card{
         width: 100%;
         flex-direction: column;
+        align-items: anchor-center;
         gap: 0;
     }
     .project-info{
@@ -163,6 +163,9 @@
     }
 }
 @media (max-width:450px) {
+  .projects-container{
+    width: 95%;
+  }
   .project-catagory-title{
         transform: translateX(-65px);
     }
@@ -179,6 +182,9 @@
     }
 }
 @media (max-width:350px) {
+  .projects-container{
+    width: 100%;
+  }
   .project-card{
     width: 95%;
   }
