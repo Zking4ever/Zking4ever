@@ -21,19 +21,16 @@ const Home = () => {
                 </div>
                 <div className="description">
                     <div className="intro"> A passionate 
-                        <div aria-hidden className='jobTitle-container'>
+                        <div className='jobTitle-container'>
                             <div className="jobTitles">
-                            <span>Full Stack Developer</span>
-                            <span>Mobile App Developer</span>
-                            <span>Frontend Developer</span>
-                            </div>
-                            <div className="jobTitles">
-                            <span>Full Stack Developer</span>
-                            <span>Mobile App Developer</span>
-                            <span>Frontend Developer</span>
+                                <span>Desktop App Developer</span>
+                                <span>Full Stack Developer</span>
+                                <span>Problem Solver</span>
+                                <span>Mobile App Developer</span>
+                                <span>Frontend Developer</span>
                             </div>
                         </div>
-                        obssesed in creating interactive and user-friendly websites/applications. 
+                        obssesed in creating interactive and user-friendly tech products. 
                     </div>
                     <div className="btns">
                         <Link to="/projects"><button>View My Work</button></Link>

@@ -108,7 +108,7 @@
   color: inherit;
 }
 .intro{
-  font-size: 1.2rem;
+  font-size: small;
   max-width: 500px;
   margin:20px auto;
 }
@@ -127,30 +127,42 @@
   font-size: 30px;
   font-weight: bold;
   color: rgb(86, 64, 209);
-  animation: moveDownWard 5s ease infinite;
+  animation: moveDownWard 10s ease infinite;
   margin-bottom: 5px;
 }
 @keyframes moveDownWard {
   0%{
     transform: translateY(-105%);
   }
-  10%{
-    transform: translateY(-72%);
+  6%{
+    transform: translateY(-85%);
   }
-  33%{
-    transform: translateY(-72%);
+  20%{
+    transform: translateY(-85%);
   }
-  43%{
-    transform: translateY(-40%);
+  26%{
+    transform: translateY(-65%);
+  }
+  40%{
+    transform: translateY(-65%);
+  }
+  46%{
+    transform: translateY(-45%);
+  }
+  60%{
+    transform: translateY(-45%);
   }
   66%{
-    transform: translateY(-40%);
+    transform: translateY(-25%);
   }
-  76%{
-    transform: translateY(-5%);
+  80%{
+    transform: translateY(-25%);
   }
-  99%{
-    transform: translateY(-5%);
+  86%{
+    transform: translateY(-3%);
+  }
+  100%{
+    transform: translateY(-3%);
   }
 }
 .btns{

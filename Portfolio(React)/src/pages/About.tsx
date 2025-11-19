@@ -26,8 +26,8 @@ const About = () => {
     return (
         <>
             <Header />
-            <div className='home'>
-                <section style={{textAlign:'left'}}>
+            <div>
+                <section style={{textAlign:'left',padding:20}}>
                     <h1>About</h1>
                     <p> 
                         Do you remember the day you said "Ohh..I'm born for this" for the first time? you might have said it a lot:)
