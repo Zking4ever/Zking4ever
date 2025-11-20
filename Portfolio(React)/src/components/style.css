@@ -1,0 +1,60 @@
+/* Header styles */
+.header {
+  width: min(80%,800px);
+  height: 4em;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  position: fixed;
+  z-index: 1000;
+}
+.header nav{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.navigator{
+  cursor: pointer;
+  flex: 1;
+}
+.glass{
+  width: 25%;
+  height: 2em;
+  position: absolute;
+  align-self: center;
+  border-radius: 5px;
+  z-index: -1;
+  background: var(--gradient1);
+  transition: all .5s ease;
+}
+.glass[data-page=about]{
+  transform: translateX(100%);
+}
+.glass[data-page=projects]{
+  transform: translateX(200%);
+}
+.glass[data-page=contact]{
+  transform: translateX(300%);
+}
+
+@media (max-width:760px) {
+  .header{
+    width: 95%;
+    height: 3em;
+    margin: auto;
+    border-radius: 10px;
+    justify-content: space-between;
+    position: absolute;
+    backdrop-filter: unset;
+  }
+  .header nav{
+    width: 70%;
+  }
+  .header nav .glass{
+    height: 1.5em;
+  }
+}
