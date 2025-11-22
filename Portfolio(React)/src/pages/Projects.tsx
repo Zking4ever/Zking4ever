@@ -27,7 +27,7 @@ const projectsList = {
         {
             title: 'Project Three',
             description: 'This is a brief description of Project Three. loremdfdjhvbjb j  This is a brief description of Project Three.This is a brief description of Project Three.',
-            link: 'https://github.com/user/project-three',
+            link: 'https://zking4ever.github.io/practice-javascript/',
             tools: ['React', 'TypeScript', 'CSS']
         }
     ]

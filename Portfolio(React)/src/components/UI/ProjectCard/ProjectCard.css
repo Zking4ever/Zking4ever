@@ -26,12 +26,12 @@
   background-color: var(--back3);
   z-index: 1;
 }
-.project-picture img{
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+.project-picture iframe{
+  width: 103%;
+  height: 110%;
   transition: all .3s ease;
 }
+
 
 .project-box-connect{
     height: 50px;

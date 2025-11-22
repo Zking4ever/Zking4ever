@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link,tool
         <div className="project-card">
             {/* first box for project logo or mockup */}
             <div className="project-picture">
-                <img src={`https://avatar.iran.liara.run/username?username=`+title} alt="project-pic" />
+                <iframe src={link} ></iframe>
             </div>
             {/* Connecting line between two boxes when hovered */}
             <div className="project-box-connect"></div>
