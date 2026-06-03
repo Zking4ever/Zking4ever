@@ -44,7 +44,7 @@ const Home = () => {
             <section>
                     <div>
                         <span className="home-title">What I Do</span>
-                        <p className="home-title-desc">Here are all the services that i provide to my clients. I Hope I offer the service that you are looking for. If you do not find something that you are looking for than please send me an email.</p>
+                        <p className="home-title-desc">Here are all the services that i provide to my clients. I hope I offer the service that you are looking for. If you do not find what you are looking for then please send me an email.</p>
                     </div>
                     <div className="work-container">
                         <div className="work">

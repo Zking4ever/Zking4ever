@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import ProjectCard from '../components/UI/ProjectCard/ProjectCard';
+import './project.css'
 
 const projectsList = {
     "projectCatagory":"Web DEVELOPMENT",
@@ -40,6 +41,25 @@ const Projects = () => {
         <Header />
         <div className="projects-container">
             <h1>Featured Projects</h1>
+            <div className="project-wrapper">
+                <div className="left">
+                        <div className="img left-img"></div>
+                </div>
+                <div className="right">
+                    <div className="top">
+                        <div className="top-left">
+                            <div className="img top-left-img"></div>
+                        </div>
+                        <div className="top-right">
+                            <div className="img top-right-img"></div>
+                        </div>
+                    </div>
+                    <div className="bottom">
+                        <div className="img bottom-img"></div>
+                    </div>
+                </div>
+            </div>
+
             <div className="projects-list">
                 {   <h2 className='project-catagory-title'>{projectsList.projectCatagory}</h2>}
                 {projectsList.projects.map((project, index) => (
