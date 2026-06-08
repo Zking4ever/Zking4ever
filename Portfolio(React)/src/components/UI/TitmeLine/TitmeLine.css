@@ -44,7 +44,7 @@
   background: rgba(124,106,255,0.08);
   border: 1px solid rgba(124,106,255,0.18);
   padding: 3px 10px;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-sm);
   margin-bottom: 10px;
 }
 

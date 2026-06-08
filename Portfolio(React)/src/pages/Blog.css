@@ -1,0 +1,124 @@
+/* ===== BLOG PAGE ===== */
+.blog-page {
+  width: 100%;
+  padding-top: var(--header-h);
+  background: var(--bg-primary);
+}
+
+/* Hero */
+.blog-hero {
+  background: var(--bg-secondary);
+  padding: 60px 0 50px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.blog-hero-inner {
+  width: min(900px, 92%);
+  margin: 0 auto;
+}
+.blog-hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.blog-hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Cards Section */
+.blog-cards-section {
+  padding: 60px 0 80px;
+}
+.blog-cards-inner {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+.blog-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* ===== BLOG CONTENT / ARTICLE READER ===== */
+.blog-reader-container {
+  width: min(780px, 92%);
+  margin: 40px auto 80px;
+  padding: 0 10px;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.blog-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  transition: var(--transition-fast);
+}
+.blog-back-btn:hover {
+  color: var(--accent-primary);
+  transform: translateX(-4px);
+}
+
+.blog-article {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 40px 48px;
+  box-shadow: var(--shadow-sm);
+}
+
+.blog-article-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.blog-article-tag {
+  background: rgba(0, 145, 255, 0.1);
+  color: var(--accent-primary);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.blog-article-title {
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+
+.blog-article-body {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+.blog-article-p {
+  margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .blog-article {
+    padding: 24px 20px;
+  }
+  .blog-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

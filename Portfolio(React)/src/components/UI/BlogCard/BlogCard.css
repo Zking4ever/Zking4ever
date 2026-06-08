@@ -1,32 +1,91 @@
-.blog-card{
+.blog-card-link {
+  display: block;
   width: 100%;
-  max-width: 300px;
-  margin-left: 25px;
-  text-align: left;
-  display: inline-block;
-  cursor: pointer;
+  text-decoration: none;
 }
-.blog-card *{
+
+.blog-card {
+  width: 100%;
+  text-align: left;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  cursor: pointer;
+  transition: var(--transition-med);
+  position: relative;
+}
+
+.blog-card * {
   margin: 0;
   padding: 0;
 }
-.blog-image{
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  background-color: azure;
+
+.blog-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
-.blog-decription{
+
+.blog-image {
   width: 100%;
-  font-weight: bold;
+  height: 160px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--bg-secondary) 30%, var(--bg-primary) 100%);
   position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-subtle);
+}
+
+.blog-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--accent-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+}
+
+.blog-decription {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
-.blog-small{
-  font-size: 0.8rem;
-  color: gray;
+
+.blog-decription h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.3;
+}
+
+.blog-summary-text {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-small {
+  font-size: 0.76rem;
+  color: var(--text-muted);
   display: flex;
-  gap: 5px;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.blog-separator {
+  color: var(--border-medium);
 }

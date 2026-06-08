@@ -129,13 +129,18 @@ export default function Projects() {
               <h2 className="section-title featured-title">Smaller Projects</h2>
               <div className="divider" />
             </div>
-            <div className="small-projects-category-label">
-              <span className="category-badge">Web Development</span>
+
+            <div className="small-projects-category">
+              <h3 className="category-title">
+                Web <span className="category-title-alt">Development</span>
+              </h3>
+              <div className="category-connect-line" />
             </div>
+
             <div className="small-projects-list">
               {SMALL_PROJECTS.map((p, i) => (
-                <div key={p.title} className="small-project-entry">
-                  {i > 0 && <div className="connect-line" />}
+                <div key={p.title} className="small-project-entry-wrap">
+                  {i > 0 && <div className="project-connect-line" />}
                   <ProjectCard
                     title={p.title}
                     description={p.description}

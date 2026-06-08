@@ -9,18 +9,18 @@ import { MdOutlineEmail } from 'react-icons/md';
 const EDUCATION = [
   {
     time: '2022 – Present',
-    institution: 'Computer Science',
-    content: 'Pursuing Computer Science, specialising in software engineering, algorithms, and system design. Actively building products that bridge theory with real-world impact.',
+    institution: 'Hawassa University — Computer Science',
+    content: 'Pursuing my Bachelor’s degree in Computer Science. Focusing on software engineering principles, algorithms, data structures, and database systems, while translating academic concepts into hands-on side projects.',
   },
   {
     time: '2018 – 2022',
-    institution: 'High School — Natural Science',
-    content: 'Graduated with distinction in sciences. While everyone expected Medicine, I chose to follow code — the language that lets you build anything imaginable.',
+    institution: 'High School — Natural Science Focus',
+    content: 'Graduated with high honors in sciences. While family and mentors expected me to choose a path in Medicine, I followed my curiosity for logic and programming, dedicating my spare time to learning software development.',
   },
   {
     time: '2012 – 2018',
-    institution: 'Primary & Middle School',
-    content: 'Early curiosity sparked by fixing a broken desktop (a.k.a. PLO). This moment turned neighbourhood tech-support into a lifelong passion for technology.',
+    institution: 'Early Tech Curiosity',
+    content: 'My tech journey began when I dismantled and successfully repaired a broken family desktop computer. That small victory turned me into the local neighborhood tech support and sparked a lifelong passion for computer systems.',
   },
 ];
 
@@ -46,17 +46,10 @@ export default function About() {
                 The Dev Behind the Code
               </h1>
               <p className="about-lead">
-                My name is <strong>Astawus</strong> — meaning <em>"remember!"</em> —
-                and I sure do. My tech journey began with a broken desktop, a week of
-                troubleshooting, and the quiet realisation that I could bend machines
-                to my will. That feeling never left.
+                My name is <strong>Astawus</strong> — meaning <em>"remember!"</em> in my language. True to my name, I remember the spark that started it all: a broken desktop, a week of stubborn troubleshooting, and the realization that software gives us the power to create whatever we can imagine.
               </p>
               <p className="about-bio">
-                From fixing hardware in the neighbourhood to mastering full-stack development,
-                my obsession with building things grew through C++, Java, HTML, CSS, and JavaScript.
-                Even when everyone expected me to go into Medicine, I chose Computer Science —
-                and I've never looked back. Today I build ground-breaking products across web,
-                mobile and desktop. There's a lot more to come, so stay tuned.
+                What began as fixing neighborhood electronics soon evolved into a deep dive into programming languages. I spent years teaching myself C++, Java, and modern web technologies. Despite strong guidance to pursue medicine, I chose Computer Science at university because building software is my true passion. Today, I construct reliable platforms across web, mobile, and desktop. I’m constantly learning, building, and refining my craft.
               </p>
               <div className="about-hero-socials">
                 <a href="https://github.com/Zking4ever" target="_blank" rel="noopener noreferrer" className="social-pill">

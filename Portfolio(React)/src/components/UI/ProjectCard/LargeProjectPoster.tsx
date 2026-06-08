@@ -35,12 +35,6 @@ export default function LargeProjectPoster({ project, index }: Props) {
           <div className="bubble bubble-main">
             <span className="bubble-text">{project.tagline}</span>
           </div>
-          {/* Play button hint */}
-          <div className="panel-play-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-          </div>
         </div>
 
         <div className="panel-grid-side">

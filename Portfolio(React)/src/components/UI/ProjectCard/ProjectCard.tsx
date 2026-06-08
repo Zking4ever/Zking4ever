@@ -20,17 +20,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, git
         <div className="project-picture-overlay" />
       </div>
 
-      {/* Connector */}
-      <div className="project-box-connect" aria-hidden="true" />
-
       {/* Info */}
       <div className="project-info">
-        {/* Tools */}
-        <div className="project-tools">
-          {tools?.map((tool) => (
-            <span key={tool} className="tool">{tool}</span>
-          ))}
-        </div>
+        {/* Tools Capsule (top-right) */}
+        {tools && tools.length > 0 && (
+          <div className="project-tools-capsule">
+            {tools.map((tool) => (
+              <span key={tool} className="tool-tag">{tool}</span>
+            ))}
+          </div>
+        )}
 
         <p className="project-title">{title}</p>
         <p className="project-description">{description}</p>

@@ -14,7 +14,7 @@
 }
 
 .poster:hover {
-  box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px var(--accent, #7c6aff);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px var(--accent, #0095ff);
   transform: translateY(-4px);
 }
 
@@ -216,7 +216,7 @@
   transition: var(--transition-fast);
 }
 .see-details-row:hover {
-  color: var(--accent, #a855f7);
+  color: var(--accent, #0095ff);
 }
 
 .panel-actions {
