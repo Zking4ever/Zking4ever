@@ -1,93 +1,137 @@
 #root {
   text-align: center;
 }
-.wrapper{
-  width: 98vw;
-  min-height: 98vh;
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
   position: relative;
-  flex-direction: column;
-  align-items: center;
+  background-color: var(--bg-primary);
 }
 
-@keyframes autoScroll {
-  from{
-    transform: translateX(0);
-  }
-  to{
-    transform: translateX(-100%);
-  }
-}
-@media (max-width:760px) {
-  .wrapper{
-    width: 95vw;
-    border-radius: 0;
-  }
+/* ===== PAGE WRAPPER ===== */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: var(--header-h);
 }
 
-/* Contact Page */
-.contact-page{
-  padding: 60px 0px;
+/* ===== SECTION BASE ===== */
+.section {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 80px 0;
 }
-.contact-page-box{
-  display:flex;
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 12px;
 }
-.form-container{
-  flex:1;
-  margin-right: 20px;
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
 }
-.socials-container{
-  flex: 0.1;
-  display: flex;
-  flex-direction: column;
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
   align-items: center;
-}
-.socials{
-  width: fit-content;
-  border: 1px solid gray;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-}
-.socials *:hover{
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
   cursor: pointer;
-  transform-origin: 50% 50%;
-  transform: scale(1.1);
+  transition: var(--transition-med);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-@media (max-width:760px) {
-  .content{
-    padding:  0;
-  }
-  .contact-page-box{
-    flex-direction: column-reverse;
-  }
-  .socials-container{
-    width: 90%;
-    margin: auto;
-    flex:.1;
-    margin-bottom: 10px;
-    flex-direction: column-reverse;
-  }
-  .socials{
-    margin-top: 20px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.btn-primary {
+  background: var(--gradient-accent);
+  color: #fff;
+  box-shadow: var(--shadow-accent);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(124,106,255,0.4);
 }
 
-.blog-page{
-  padding: 60px 0px;
-  padding-top: 20vh;
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
 }
-.blog-page-title{
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+.btn-outline:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(124,106,255,0.06);
+  transform: translateY(-2px);
 }
-.blog-cards-container{
-  gap: 20px;
-  width: 100vw;
+
+.btn-ghost {
+  background: var(--bg-glass);
+  border: 1px solid var(--bg-glass-border);
+  color: var(--text-primary);
+  backdrop-filter: blur(10px);
+}
+.btn-ghost:hover {
+  background: var(--accent-primary);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+/* ===== TAG CHIPS ===== */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(124,106,255,0.12);
+  color: var(--accent-primary);
+  border: 1px solid rgba(124,106,255,0.2);
+  letter-spacing: 0.04em;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-accent);
+  border-radius: 2px;
+  margin: 0 auto 32px;
+}
+
+/* ===== NOISE OVERLAY ===== */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px;
+  z-index: 9998;
 }

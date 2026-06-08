@@ -1,74 +1,113 @@
-/* Contact form css */
-.success-message{
-  background-color: hsl(120, 100%, 45%);
-  color: white;
-  font-size: 20px;
-  padding: 6px 20px;
-  text-align: center;
-  border-left: solid black;
-  border-radius:0 10px 10px 0;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  position: relative;
-}
-.error-message{
-  background-color: hsl(0, 100%, 45%);
-  color: white;
-  font-size: 20px;
-  padding: 6px 20px;
-  text-align: center;
-  border-left: solid black;
-  border-radius:0 10px 10px 0;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  position: relative;
-}
-.contact-form{
-  background-color: aliceblue;
-  padding: 30px 10px;
+/* ===== CONTACT FORM ===== */
+.contact-form-wrapper {
   width: 100%;
-  margin: auto;
-  border-radius: 20px;
-  color: black;
 }
-.contact-name-container{
+
+/* Toasts */
+.cf-toast {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  animation: fadeInUp 0.3s ease;
 }
-.contact-name{
-  flex: 1;
+.cf-toast--success {
+  background: rgba(16,185,129,0.12);
+  border: 1px solid rgba(16,185,129,0.3);
+  color: #34d399;
 }
-.contact-name,
-.contact-email,
-.contact-message{
-  text-align: left;
+.cf-toast--error {
+  background: rgba(239,68,68,0.12);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: #f87171;
+}
+.cf-toast button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.cf-toast button:hover { opacity: 1; }
+
+/* Form */
+.contact-form {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  font-size: 26px;
+  gap: 18px;
+}
+.cf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.cf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.cf-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.cf-field input,
+.cf-field textarea {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 13px 16px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  outline: none;
+  transition: var(--transition-fast);
+  resize: none;
+  width: 100%;
+}
+.cf-field input:focus,
+.cf-field textarea:focus {
+  border-color: var(--accent-primary);
+  background: var(--bg-card);
+  box-shadow: 0 0 0 3px rgba(124,106,255,0.12);
+}
+.cf-field input::placeholder,
+.cf-field textarea::placeholder {
+  color: var(--text-muted);
+  font-size: 0.88rem;
 }
 
-.contact-name input{
-  width: 96%;
-  height: 30px;
+.cf-submit {
+  align-self: flex-start;
+  padding: 13px 32px;
+  font-size: 0.95rem;
 }
-.contact-email input{
-  height: 30px;
+.cf-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
-.contact-message textarea{
-  min-height: 100px;
+
+/* Loading spinner */
+.cf-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
 }
-.contact-submit{
-  width: 100%;
-  margin: 10px 0;
-}
-.contact-form input,
-.contact-form textarea{
-  font-size: 20px;
-  border-radius: 10px;
-  border: solid rgb(132, 132, 132) 1px;
-  background-color: transparent;
-  color: hsl(0, 8%, 35%);
-  padding: 5px;
+
+@media (max-width: 600px) {
+  .cf-row { grid-template-columns: 1fr; }
 }
