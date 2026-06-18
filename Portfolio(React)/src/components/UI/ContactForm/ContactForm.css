@@ -54,6 +54,7 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
+  text-align: left;
 }
 .cf-field label {
   font-size: 0.8rem;
@@ -80,7 +81,7 @@
 .cf-field textarea:focus {
   border-color: var(--accent-primary);
   background: var(--bg-card);
-  box-shadow: 0 0 0 3px rgba(124,106,255,0.12);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 .cf-field input::placeholder,
 .cf-field textarea::placeholder {
@@ -88,13 +89,76 @@
   font-size: 0.88rem;
 }
 
-.cf-submit {
+.cf-select {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 13px 16px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  outline: none;
+  transition: var(--transition-fast);
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+}
+.cf-select:focus {
+  border-color: var(--accent-primary);
+  background: var(--bg-card);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.cf-radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px 0;
+}
+.cf-radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.cf-radio-label input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-primary);
+  cursor: pointer;
+  margin: 0;
+}
+
+.cf-submit-btn {
   align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 13px 32px;
   font-size: 0.95rem;
+  font-weight: 600;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+  cursor: pointer;
 }
-.cf-submit:disabled {
-  opacity: 0.7;
+.cf-submit-btn:hover:not(:disabled) {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-primary);
+  transform: translateY(-1px);
+}
+.cf-submit-btn:disabled {
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
@@ -109,5 +173,8 @@
 }
 
 @media (max-width: 600px) {
-  .cf-row { grid-template-columns: 1fr; }
+  .cf-row { 
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }

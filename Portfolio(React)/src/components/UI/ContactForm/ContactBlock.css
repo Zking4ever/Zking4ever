@@ -1,0 +1,126 @@
+.contact-block-container {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.contact-block-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Info Column */
+.contact-info-column {
+  text-align: left;
+}
+
+.contact-info-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #ff4b6e; /* rose/pink mockup color */
+  margin-bottom: 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.contact-info-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icon box styles matching mockup */
+.detail-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-xl); /* 12px - sharp curved box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid transparent;
+  flex-shrink: 0;
+}
+
+.detail-icon-wrapper--location {
+  border-color: rgba(244, 63, 94, 0.25);
+  color: #f43f5e;
+  background: rgba(244, 63, 94, 0.05);
+}
+
+.detail-icon-wrapper--email {
+  border-color: rgba(168, 85, 247, 0.25);
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.05);
+}
+
+.detail-icon-wrapper--phone {
+  border-color: rgba(16, 185, 129, 0.25);
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.detail-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.detail-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.detail-value--link {
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+.detail-value--link:hover {
+  color: var(--accent-primary);
+}
+
+/* Form Card Container */
+.contact-form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 36px 40px;
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-block-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .contact-info-subtitle {
+    margin-bottom: 32px;
+  }
+  .contact-form-card {
+    padding: 28px 24px;
+  }
+}

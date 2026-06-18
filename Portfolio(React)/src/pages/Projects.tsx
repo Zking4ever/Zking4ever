@@ -26,7 +26,7 @@ export interface LargeProject {
   accent: string;
 }
 
-const LARGE_PROJECTS: LargeProject[] = [
+export const LARGE_PROJECTS: LargeProject[] = [
   {
     type: 'large',
     title: 'ODA Social Media',
@@ -63,7 +63,7 @@ const LARGE_PROJECTS: LargeProject[] = [
   },
 ];
 
-const SMALL_PROJECTS: SmallProject[] = [
+export const SMALL_PROJECTS: SmallProject[] = [
   {
     type: 'small',
     title: 'Tic-Tac-Toe Game',

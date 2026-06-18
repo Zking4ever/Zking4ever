@@ -14,7 +14,7 @@
 }
 
 .poster:hover {
-  box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px var(--accent, #0095ff);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.3), 0 0 0 1px var(--accent, #0095ff);
   transform: translateY(-4px);
 }
 
@@ -322,6 +322,7 @@
 @media (max-width: 600px) {
   .poster-panels {
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
     min-height: 320px;
   }
   .panel-grid-side {

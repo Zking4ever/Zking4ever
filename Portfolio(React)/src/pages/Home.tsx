@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Tools from '../components/UI/ToolList/Tools';
-import profile from '../assets/user.png';
 import './Home.css';
+import { LARGE_PROJECTS } from '../pages/Projects';
+import LargerProjectPoster from '../components/UI/ProjectCard/LargeProjectPoster';
+import ContactBlock from '../components/UI/ContactForm/ContactBlock';
 
 const SERVICES = [
   {
@@ -111,6 +113,22 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ===== PROJECTS PREVIEW ===== */}
+        <section className="home-section projects-preview-section">
+          <div className="section">
+            <p className="section-label">Featured Projects</p>
+            <h2 className="section-title">Selected Work</h2>
+            <div className="projects-grid">
+              {LARGE_PROJECTS.slice(0,3).map((p, i) => (
+                <LargerProjectPoster
+                  key={p.title} project={p} index={i}
+                />
+              ))}
+            </div>
+            <Link to="/projects" className="btn btn-primary" style={{marginTop: '1rem'}}>View All Projects</Link>
+          </div>
+        </section>
+
         {/* ===== TECH STACK ===== */}
         <section className="home-section tools-section">
           <div className="section">
@@ -143,6 +161,13 @@ export default function Home() {
             </div>
           </div>
         </section>
+<section className="home-section contact-section">
+  <div className="section">
+    <p className="section-label">Get In Touch</p>
+    <h2 className="section-title">Contact Me</h2>
+    <ContactBlock />
+  </div>
+</section>
 
       </main>
     </>
