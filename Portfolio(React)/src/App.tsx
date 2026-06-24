@@ -8,21 +8,27 @@ import Blog from './pages/Blog';
 import BlogContent from './pages/BlogContent';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
+import Header from './components/Header';
 
 function App() {
   return (
     <ThemeProvider>
+      <div className="wrapper">
       <Router>
-        <Routes>
-          <Route path="/*"        element={<Home />} />
-          <Route path="/about"    element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact"  element={<Contact />} />
-          <Route path="/blog"     element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogContent />} />
-        </Routes>
-        <Footer />
+        <Header />
+        <div className="content">
+          <Routes>
+            <Route path="/*"        element={<Home />} />
+            <Route path="/about"    element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact"  element={<Contact />} />
+            <Route path="/blog"     element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogContent />} />
+          </Routes>
+        </div>
       </Router>
+      </div>
+      <Footer />
     </ThemeProvider>
   );
 }

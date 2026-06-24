@@ -21,16 +21,9 @@ const THEME_META: Record<Theme, { label: string; icon: string }> = {
 export default function Header() {
   const { theme, setTheme } = useTheme();
   const location = useLocation();
-  const [scrolled, setScrolled]     = useState(false);
   const [menuOpen, setMenuOpen]     = useState(false);
   const [themeOpen, setThemeOpen]   = useState(false);
   const themeRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   // Close theme picker when clicking outside
   useEffect(() => {
@@ -52,13 +45,15 @@ export default function Header() {
 
   return (
     <>
-      <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
-        <div className="header-inner">
-          {/* Logo */}
+      <header className={`header`}>
+              {/* Logo */}
           <Link to="/" className="header-logo" aria-label="Home">
             {theme=='light' ? <img src={logo} alt="Logo" className="logo-image" /> : 'AS' }
+            <div className="details">
+              <span className="name">Astawus Amsalu</span>
+              <span>Fullstack dev</span>
+            </div>
           </Link>
-
           {/* Desktop nav */}
           <nav className="header-nav" aria-label="Main navigation">
             {NAV_LINKS.map(({ label, path }) => (
@@ -68,13 +63,13 @@ export default function Header() {
                 className={`nav-link${isActive(path) ? ' nav-link--active' : ''}`}
               >
                 {label}
-                {isActive(path) && <span className="nav-indicator" />}
               </Link>
             ))}
           </nav>
 
           {/* Right controls */}
           <div className="header-controls">
+       
             {/* Theme picker */}
             <div className="theme-picker" ref={themeRef}>
               <button
@@ -111,7 +106,6 @@ export default function Header() {
               <span /><span /><span />
             </button>
           </div>
-        </div>
       </header>
 
       {/* Mobile menu overlay */}

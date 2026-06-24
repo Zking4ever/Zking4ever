@@ -1,4 +1,3 @@
-import Header from '../components/Header';
 import BlogCard, { type BlogDataType } from '../components/UI/BlogCard/BlogCard';
 import './Blog.css';
 
@@ -35,7 +34,6 @@ export const BlogDatasSample: BlogDataType[] = [
 export default function Blog() {
   return (
     <>
-      <Header />
       <main className="blog-page">
 
         {/* Hero */}

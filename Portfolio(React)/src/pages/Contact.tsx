@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
-import ContactBlock from '../components/UI/ContactForm/ContactBlock';
+ import ContactBlock from '../components/UI/ContactForm/ContactBlock';
 import { LiaTelegramPlane } from 'react-icons/lia';
 import { FaInstagram } from 'react-icons/fa';
 import { LuFacebook, LuLinkedin, LuYoutube } from 'react-icons/lu';
@@ -25,7 +24,6 @@ const SOCIALS = [
 const Contact: React.FC = () => {
   return (
     <>
-      <Header />
       <main className="contact-page">
 
         {/* Hero */}

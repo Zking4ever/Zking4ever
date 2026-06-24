@@ -58,15 +58,15 @@
 
 /* ===== LIGHT THEME ===== */
 [data-theme="light"] {
-  --bg-primary: #f9fafb;
+  --bg-primary: #ffffff;
   --bg-secondary: #f3f4f6;
   --bg-card: #ffffff;
   --bg-card-hover: #f9fafb;
   --bg-glass: rgba(255,255,255,0.6);
   --bg-glass-border: rgba(37, 99, 235, 0.15);
 
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
+  --text-primary: #000103;
+  --text-secondary: #4b5563c8;
   --text-muted: #9ca3af;
   --text-accent: #2563eb;
 

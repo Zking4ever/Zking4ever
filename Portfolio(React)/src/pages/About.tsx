@@ -1,4 +1,3 @@
-import Header from '../components/Header';
 import TimeLine from '../components/UI/TitmeLine/TitmeLine';
 import profile from '../assets/user.png';
 import './About.css';
@@ -34,7 +33,6 @@ const SKILLS_GROUPS = [
 export default function About() {
   return (
     <>
-      <Header />
       <main className="about-page">
 
         {/* ===== HERO ===== */}
@@ -43,10 +41,10 @@ export default function About() {
             <div className="about-hero-text">
               <p className="section-label">About Me</p>
               <h1 className="about-hero-title">
-                The Dev Behind the Code
+                About--
               </h1>
               <p className="about-lead">
-                My name is <strong>Astawus</strong> — meaning <em>"remember!"</em> in my language. True to my name, I remember the spark that started it all: a broken desktop, a week of stubborn troubleshooting, and the realization that software gives us the power to create whatever we can imagine.
+                My name is ----
               </p>
               <p className="about-bio">
                 What began as fixing neighborhood electronics soon evolved into a deep dive into programming languages. I spent years teaching myself C++, Java, and modern web technologies. Despite strong guidance to pursue medicine, I chose Computer Science at university because building software is my true passion. Today, I construct reliable platforms across web, mobile, and desktop. I’m constantly learning, building, and refining my craft.

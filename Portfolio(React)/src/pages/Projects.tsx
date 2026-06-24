@@ -1,4 +1,3 @@
-import Header from '../components/Header';
 import ProjectCard from '../components/UI/ProjectCard/ProjectCard';
 import LargeProjectPoster from '../components/UI/ProjectCard/LargeProjectPoster';
 import './Projects.css';
@@ -88,7 +87,6 @@ export const SMALL_PROJECTS: SmallProject[] = [
 export default function Projects() {
   return (
     <>
-      <Header />
       <main className="projects-page">
 
         {/* Page Hero */}

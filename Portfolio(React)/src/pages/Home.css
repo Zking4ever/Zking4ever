@@ -1,7 +1,7 @@
 /* ===== HOME PAGE ===== */
 .home-page {
   width: 100%;
-  padding-top: var(--header-h);
+   
 }
 
 /* ===== HERO ===== */
@@ -161,62 +161,6 @@
 /* ===== SECTION WRAPPER ===== */
 .home-section {
   width: 100%;
-}
-
-/* ===== SERVICES ===== */
-.services-section {
-  background: var(--bg-secondary);
-}
-.services-section .section {
-  text-align: center;
-}
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-}
-.service-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 32px 28px;
-  text-align: left;
-  transition: var(--transition-med);
-  position: relative;
-  overflow: hidden;
-}
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 3px;
-  background: var(--gradient-accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: var(--transition-med);
-}
-.service-card:hover {
-  border-color: var(--border-strong);
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-accent);
-}
-.service-card:hover::before {
-  transform: scaleX(1);
-}
-.service-icon {
-  font-size: 2.4rem;
-  margin-bottom: 16px;
-}
-.service-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 10px;
-}
-.service-desc {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
 }
 
 /* ===== TOOLS SECTION ===== */
