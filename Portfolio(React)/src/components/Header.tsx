@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme, type Theme } from '../context/ThemeContext';
 import './Header.css';
+import logo from '../assets/logo.png';
 
 const NAV_LINKS = [
   { label: 'Home',     path: '/'        },
@@ -55,8 +56,7 @@ export default function Header() {
         <div className="header-inner">
           {/* Logo */}
           <Link to="/" className="header-logo" aria-label="Home">
-            <span className="logo-mark">AS</span>
-            <span className="logo-dot" />
+            {theme=='light' ? <img src={logo} alt="Logo" className="logo-image" /> : 'AS' }
           </Link>
 
           {/* Desktop nav */}
