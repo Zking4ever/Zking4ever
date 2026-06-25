@@ -69,15 +69,19 @@
   gap: 8px;
 }
 
-.socials *{
+.socials a{
   background-color: var(--text-primary);
   color: var(--bg-card);
-  padding: 8px;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
   border-radius: 50%;
-  font-size: 30px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.socials *:hover {
+.socials a:hover {
   background: var(--text-secondary);
   /* background: var(--bg-glass); */
 }

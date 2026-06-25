@@ -20,7 +20,6 @@ export default function BlogContent() {
   if (!currentBlog) {
     return (
       <>
-        <Header />
         <div className="blog-page">
           <div className="blog-reader-container">
             <Link to="/blog" className="blog-back-btn">
@@ -38,7 +37,6 @@ export default function BlogContent() {
 
   return (
     <>
-      <Header />
       <main className="blog-page">
         <div className="blog-reader-container">
           <Link to="/blog" className="blog-back-btn">

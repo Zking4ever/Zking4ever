@@ -72,11 +72,10 @@ export default function Header() {
           </nav>
           {/* Socals */}
           <div className="socials">
-            <FiGithub />
-            <LuLinkedin />
-            <FaInstagram />
-            <LiaTelegramPlane />
-
+            <a href="https://github.com/Zking4ever"><FiGithub /></a>
+            <a href="https://linkedin.com/in/astawus-amsalu-281048339"><LuLinkedin /></a>
+            <a href="https://www.instagram.com/astawusamsalu/"><FaInstagram /></a>
+            <a href="https://t.me/astawus12"><LiaTelegramPlane /></a>
           </div>
 
           {/* Right controls */}
