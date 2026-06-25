@@ -2,7 +2,7 @@
 
 /* ===== DESIGN TOKENS & THEME SYSTEM ===== */
 :root {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: futura-pt, 'Inter', system-ui, sans-serif;
   line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;

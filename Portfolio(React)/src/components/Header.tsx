@@ -3,6 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTheme, type Theme } from '../context/ThemeContext';
 import './Header.css';
 import logo from '../assets/logo.png';
+import { LiaTelegramPlane } from 'react-icons/lia';
+import { FaInstagram } from 'react-icons/fa';
+import { LuLinkedin } from 'react-icons/lu';
+import { FiGithub } from 'react-icons/fi';
 
 const NAV_LINKS = [
   { label: 'Home',     path: '/'        },
@@ -46,7 +50,7 @@ export default function Header() {
   return (
     <>
       <header className={`header`}>
-              {/* Logo */}
+          {/* Logo */}
           <Link to="/" className="header-logo" aria-label="Home">
             {theme=='light' ? <img src={logo} alt="Logo" className="logo-image" /> : 'AS' }
             <div className="details">
@@ -66,10 +70,17 @@ export default function Header() {
               </Link>
             ))}
           </nav>
+          {/* Socals */}
+          <div className="socials">
+            <FiGithub />
+            <LuLinkedin />
+            <FaInstagram />
+            <LiaTelegramPlane />
+
+          </div>
 
           {/* Right controls */}
           <div className="header-controls">
-       
             {/* Theme picker */}
             <div className="theme-picker" ref={themeRef}>
               <button

@@ -61,6 +61,26 @@
   color: var(--text-secondary);
   font-weight: 600;
 }
+.socials{
+  margin-top: 15px;
+  display: flex;
+  /* justify-content: space-between; */
+  transition: var(--transition-fast);
+  gap: 8px;
+}
+
+.socials *{
+  background-color: var(--text-primary);
+  color: var(--bg-card);
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 30px;
+
+}
+.socials *:hover {
+  background: var(--text-secondary);
+  /* background: var(--bg-glass); */
+}
 
 /* ===== CONTROLS ===== */
 .header-controls {
