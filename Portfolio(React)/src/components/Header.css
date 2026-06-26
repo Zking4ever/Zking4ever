@@ -19,6 +19,13 @@
   gap: 6px;
   position: absolute;
   bottom: 15px;
+  padding-left: 15px;
+  border-radius: var(--radius-pill);
+  transform: translateX(-15px);
+  cursor: pointer;
+}
+.header-logo:hover {
+  background: var(--bg-card-hover);
 }
 .header-logo img{
   width: 72px;
@@ -41,6 +48,9 @@
   font-size: 11px;
   overflow: visible;
   text-wrap-mode: nowrap;
+}
+.header-logo .icon{
+  transform: translateX(-37px);
 }
 
 .nav-link {
@@ -94,9 +104,6 @@
 }
 
 /* ===== THEME PICKER ===== */
-.theme-picker {
-  position: relative;
-}
 
 .theme-btn {
   width: 40px;
@@ -121,8 +128,7 @@
 
 .theme-dropdown {
   position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
+  left: 100%;
   background: var(--bg-card);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
@@ -130,9 +136,8 @@
   min-width: 130px;
   box-shadow: var(--shadow-lg);
   display: flex;
-  flex-direction: column;
   gap: 4px;
-  animation: fadeInUp 0.2s ease;
+  animation: fadeInRight 0.2s ease;
   z-index: 10;
 }
 
@@ -159,7 +164,7 @@
 
 .theme-option--active {
   background: rgba(124,106,255,0.12);
-  color: var(--accent-primary);
+  color: var(--text-primary);
 }
 
 /* ===== HAMBURGER ===== */
@@ -273,7 +278,7 @@
   .header-logo img{
     transform: none;
   }
-  .header-logo .details{
+  .header-logo .details,.header-logo .icon{
     display: none;
   }
   .header-nav ,.theme-btn{ display: none; }

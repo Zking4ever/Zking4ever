@@ -3,10 +3,15 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTheme, type Theme } from '../context/ThemeContext';
 import './Header.css';
 import logo from '../assets/logo.png';
+import lightLogo from '../assets/light-logo.png';
 import { LiaTelegramPlane } from 'react-icons/lia';
 import { FaInstagram } from 'react-icons/fa';
 import { LuLinkedin } from 'react-icons/lu';
 import { FiGithub } from 'react-icons/fi';
+import { IoSunnyOutline } from "react-icons/io5";
+import { LuMoon } from "react-icons/lu";
+import { ImCool } from "react-icons/im";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 const NAV_LINKS = [
   { label: 'Home',     path: '/'        },
@@ -16,10 +21,10 @@ const NAV_LINKS = [
   { label: 'Contact',  path: '/contact' },
 ];
 
-const THEME_META: Record<Theme, { label: string; icon: string }> = {
-  dark:   { label: 'Dark',   icon: '🌙' },
-  light:  { label: 'Light',  icon: '☀️' },
-  aurora: { label: 'Aurora', icon: '🌌' },
+const THEME_META: Record<Theme, { label: string; icon: React.ReactNode }> = {
+  dark:   { label: 'Dark',   icon: <LuMoon /> },
+  light:  { label: 'Light',  icon: <IoSunnyOutline /> },
+  aurora: { label: 'Cool', icon: <ImCool /> },
 };
 
 export default function Header() {
@@ -50,15 +55,35 @@ export default function Header() {
   return (
     <>
       <header className={`header`}>
-          {/* Logo */}
-          <Link to="/" className="header-logo" aria-label="Home">
-            {theme=='light' ? <img src={logo} alt="Logo" className="logo-image" /> : 'AS' }
-            <div className="details">
+          <div className="header-logo" aria-label="Home">
+            <img src={theme=='light' ? logo : lightLogo} alt="Logo" className="logo-image" />
+            <div className="details"
+                onClick={() => setThemeOpen(o => !o)}
+                aria-label="More settings"
+                title={`Site settings (current theme: ${THEME_META[theme].label})`}
+              >
               <span className="name">Astawus Amsalu</span>
               <span>Fullstack dev</span>
             </div>
-          </Link>
-          {/* Desktop nav */}
+            <div className="icon">
+              <BsThreeDotsVertical />
+            </div>
+            {themeOpen && (
+                <div className="theme-dropdown">
+                  {(Object.keys(THEME_META) as Theme[]).map(t => (
+                    <button
+                      key={t}
+                      className={`theme-option${theme === t ? ' theme-option--active' : ''}`}
+                      onClick={() => { setTheme(t); setThemeOpen(false); }}
+                    >
+                      {THEME_META[t].icon}
+                      <span>{THEME_META[t].label}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+          </div>
+          
           <nav className="header-nav" aria-label="Main navigation">
             {NAV_LINKS.map(({ label, path }) => (
               <Link
@@ -72,41 +97,14 @@ export default function Header() {
           </nav>
           {/* Socals */}
           <div className="socials">
-            <a href="https://github.com/Zking4ever"><FiGithub /></a>
-            <a href="https://linkedin.com/in/astawus-amsalu-281048339"><LuLinkedin /></a>
-            <a href="https://www.instagram.com/astawusamsalu/"><FaInstagram /></a>
-            <a href="https://t.me/astawus12"><LiaTelegramPlane /></a>
+            <a href="https://github.com/Zking4ever" target="_blank"><FiGithub /></a>
+            <a href="https://linkedin.com/in/astawus-amsalu-281048339" target="_blank"><LuLinkedin /></a>
+            <a href="https://www.instagram.com/astawusamsalu/" target="_blank"><FaInstagram /></a>
+            <a href="https://t.me/astawus12" target="_blank"><LiaTelegramPlane /></a>
           </div>
 
-          {/* Right controls */}
           <div className="header-controls">
-            {/* Theme picker */}
-            <div className="theme-picker" ref={themeRef}>
-              <button
-                className="theme-btn"
-                onClick={() => setThemeOpen(o => !o)}
-                aria-label="Switch theme"
-                title={`Theme: ${THEME_META[theme].label}`}
-              >
-                <span>{THEME_META[theme].icon}</span>
-              </button>
-              {themeOpen && (
-                <div className="theme-dropdown">
-                  {(Object.keys(THEME_META) as Theme[]).map(t => (
-                    <button
-                      key={t}
-                      className={`theme-option${theme === t ? ' theme-option--active' : ''}`}
-                      onClick={() => { setTheme(t); setThemeOpen(false); }}
-                    >
-                      <span>{THEME_META[t].icon}</span>
-                      <span>{THEME_META[t].label}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Hamburger */}
+             {/* Hamburger */}
             <button
               className={`hamburger${menuOpen ? ' hamburger--open' : ''}`}
               onClick={() => setMenuOpen(o => !o)}
