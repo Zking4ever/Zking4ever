@@ -55,13 +55,13 @@ export default function Header() {
   return (
     <>
       <header className={`header`}>
-          <div className="header-logo" aria-label="Home">
-            <img src={theme=='light' ? logo : lightLogo} alt="Logo" className="logo-image" />
-            <div className="details"
+          <div className="header-logo"
                 onClick={() => setThemeOpen(o => !o)}
                 aria-label="More settings"
                 title={`Site settings (current theme: ${THEME_META[theme].label})`}
               >
+            <img src={theme=='light' ? logo : lightLogo} alt="Logo" className="logo-image" />
+            <div className="details">
               <span className="name">Astawus Amsalu</span>
               <span>Fullstack dev</span>
             </div>
