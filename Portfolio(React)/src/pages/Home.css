@@ -4,62 +4,40 @@
    
 }
 
-.project-hero{
+.rotate-contaner{
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+.connector{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 80vh;
-  margin: 20px auto;
-}
-.project-hero .left,
-.project-hero .right{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.project-hero .left{
-  flex: .75;
-  max-width: 450px;
-}
-.project-hero .right{
-  flex: .3;
-  max-width: 180px;
-  /* background-color: red; */
-}
-.project-hero .project-poster{
-  width: 100%;
-  background-color: gray;
-  height: 500px;
-  border-radius: 20px;
-}
-.project-hero .project-content{
-  display: flex;
-  flex-direction: column;
-  padding: 0 10px;
-}
-.project-hero .project-content .title{
-  font-size: 24px;
-  font-weight: bold;
-}
-.project-hero .logo{
-  width: 100%;
-  background-color: darkgray;
-  height: 100px;
-  border-radius: 20px;
-  margin: 0 20px;
-}
-.project-hero .features{
-  margin: 0 20px;
-}
-.project-hero .features li{
-  margin-left: 20px;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  /* transform: rotateY(90deg); */
+  animation: rotate 5s ease infinite;
 }
 
-@media (min-width: 800px) {
-  
-  .project-hero{
-   transform: translateX(10%);
-   
+@keyframes rotate {
+  0%{
+    transform: rotateY(90deg);
   }
+  100%{
+    transform: rotateY(450deg);
+  }
+}
+
+.connector .project-box{
+  /* transform: rotateY(90deg) translateZ(-360px); */
+  transform: rotateY(90deg);
+  background: var(--bg-card);
+  flex: 0 0 auto
+}
+
+.connector .project-box:nth-last-of-type(2){
+  transform: rotateY(-90deg);
+
 }
 
 /* ===== HERO ===== */
@@ -73,78 +51,7 @@
   padding: 80px 0 60px;
 }
 
-/* Background Grid & Glow */
-.hero-grid-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: 
-    linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(circle at 10% 20%, black 20%, transparent 70%);
-  -webkit-mask-image: radial-gradient(circle at 10% 20%, black 20%, transparent 70%);
-  opacity: 0.85;
-  z-index: 0;
-}
-[data-theme="light"] .hero-grid-bg {
-  background-image: 
-    linear-gradient(to right, rgba(0, 149, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 149, 255, 0.06) 1px, transparent 1px);
-}
-.hero-glow-bg {
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(0, 149, 255, 0.06), transparent 70%);
-  pointer-events: none;
-  filter: blur(60px);
-  z-index: 0;
-}
 
-.hero-content {
-  width: min(1200px, 92%);
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* Text side */
-.hero-text {
-  text-align: left;
-  max-width: 800px;
-  animation: fadeInUp 0.8s ease both;
-}
-
-.hero-greeting {
-  font-size: 1.1rem;
-  color: var(--text-primary);
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.shake-hand {
-  display: inline-block;
-  animation: shakeHand 1.5s ease-in-out infinite;
-}
-@keyframes shakeHand {
-  0%,100% { transform: rotate(0deg); }
-  25%      { transform: rotate(20deg); }
-  75%      { transform: rotate(-10deg); }
-}
-
-.hero-name {
-  font-size: clamp(3.2rem, 8vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.1;
-  color: var(--text-primary);
-  margin-bottom: 28px;
-  letter-spacing: -0.03em;
-}
 
 /* Job Title Stack */
 .hero-role-wrapper {

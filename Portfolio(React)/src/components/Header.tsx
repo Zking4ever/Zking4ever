@@ -34,7 +34,6 @@ export default function Header() {
   const [themeOpen, setThemeOpen]   = useState(false);
   const themeRef = useRef<HTMLDivElement>(null);
 
-  // Close theme picker when clicking outside
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (themeRef.current && !themeRef.current.contains(e.target as Node)) {
@@ -56,6 +55,7 @@ export default function Header() {
     <>
       <header className={`header`}>
           <div className="header-logo"
+                ref={themeRef}
                 onClick={() => setThemeOpen(o => !o)}
                 aria-label="More settings"
                 title={`Site settings (current theme: ${THEME_META[theme].label})`}

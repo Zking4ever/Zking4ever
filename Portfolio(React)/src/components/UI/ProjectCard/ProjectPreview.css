@@ -1,0 +1,84 @@
+.project-box{
+  width: 100%;
+  height: 80vh;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+.project-box .detail{
+  height: 30%;
+  padding-left: 10%;
+  padding-bottom: 40px;
+  text-align: left;
+  position: relative;
+}
+.project-btn{
+  position: absolute;
+  right: 15%;
+  bottom:5px;
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.project-btn:last-child{
+  right: 10px;
+}
+.project-container{
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+.project-container .left,
+.project-container .right{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.project-container .left{
+  flex: .75;
+  max-width: 450px;
+}
+.project-container .right{
+  flex: .3;
+  max-width: 180px;
+  /* background-color: red; */
+}
+.project-container .project-poster{
+  width: 100%;
+  background-color: gray;
+  height: 500px;
+  border-radius: 20px;
+}
+.project-container .project-content{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+.project-container .project-content .title{
+  font-size: 24px;
+  font-weight: bold;
+}
+.project-container .logo{
+  width: 100%;
+  background-color: darkgray;
+  height: 100px;
+  border-radius: 20px;
+  margin: 0 20px;
+}
+.project-container .features{
+  margin: 0 20px;
+}
+.project-container .features li{
+  margin-left: 20px;
+}
+
+@media (min-width: 800px) {
+  
+  .project-container{
+   transform: translateX(10%);
+   
+  }
+}
