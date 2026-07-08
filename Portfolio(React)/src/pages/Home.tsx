@@ -15,8 +15,10 @@ export default function Home() {
     if (isScrolling.current) return;
 
     const scrollAmount = e.deltaY;
-
     if (scrollAmount === 0) return;
+    if (state === 4 && scrollAmount < 0 ) {
+      e.preventDefault();
+    };
 
     isScrolling.current = true;
     setState((prev) => scrollAmount > 0 ? Math.min(prev + 1, 4) : Math.max(prev - 1, 0) );
