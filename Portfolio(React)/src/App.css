@@ -12,6 +12,7 @@
 }
 .content{
   margin-left: 180px;
+  flex: 1;
 }
 
 /* ===== PAGE WRAPPER ===== */

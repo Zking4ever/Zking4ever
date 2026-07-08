@@ -1,34 +1,14 @@
 /* ===== HOME PAGE ===== */
 .home-page {
   width: 100%;
-   
 }
-
 .rotate-contaner{
-  width: 700px;
-  perspective: 1200px;
-  transform-style: preserve-3d;
+  transform: translateY(-150px);
 }
 .rotater{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   transform-style: preserve-3d;
-  transform-origin: 50% 50%;
-  animation: rotate 15s ease infinite;
-}
-.connector{
-  width: 65%;
-  aspect-ratio: 1;
-  transform: rotateY(calc(var(--z) * 90deg));
-  display: flex;
-  align-items: center;
-  /* gap: 300px; */
-  justify-content: center;
-  transform-style: preserve-3d;
-  position: absolute;
-  background: red;
+  transition: transform 0.5s ease;
+  /* animation: rotate 15s ease infinite; */
 }
 
 @keyframes rotate {
@@ -39,23 +19,26 @@
     transform: rotateY(450deg);
   }
 }
-
+.connector{
+  width: 95%;
+  aspect-ratio: 1;
+  transform: rotateY(calc(var(--z) * 90deg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  position: absolute;
+}
 
 .connector .holder{
   width: 100%;
-  /* position: absolute; */
-  /* transform: rotateY(90deg) translateZ(-360px); */
   transform: rotateY(90deg);
   flex-shrink: 0;
-  /* flex: 0 0 auto */
-  background: blue;
-}
-.connector .holder:last-of-type{
-
+  backface-visibility: hidden;
 }
 
-.connector:nth-of-type(2){
-  background-color: green;
+.connector .holder:first-of-type{
+  transform: rotateY(-90deg);
 }
 
 /* ===== HERO ===== */
@@ -190,8 +173,16 @@
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {  
+  .rotate-contaner{
+    transform: translateY(-100px);
+  }
+}
 @media (max-width: 900px) {
-  .hero {
+  .rotate-contaner{
+    transform: translateY(0px);
+  }
+ .hero {
     padding: 60px 0 40px;
   }
   .hero-grid-bg {
