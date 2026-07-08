@@ -12,19 +12,25 @@ export default function Home() {
         <section className="home-section projects-preview-section">
           <div className="section">
             <div className="rotate-contaner">
-              <div className="connector">
-                <ProjectPreview />
-                <ProjectPreview />
+              <div className="rotater">
+                <div className="connector" style={{ "--z": "0" } as React.CSSProperties}>
+                  <div className="holder">A</div>
+                  <div className="holder">B</div>
+                </div>
+                <div className="connector" style={{ "--z": "1" } as React.CSSProperties}>
+                  <div className="holder">1</div>
+                  <div className="holder">2</div>
+                </div>
               </div>
             </div>
-            <div className="projects-grid">
+            {/* <div className="projects-grid">
               {LARGE_PROJECTS.slice(0,3).map((p, i) => (
                 <LargerProjectPoster
                   key={p.title} project={p} index={i}
                 />
               ))}
             </div>
-            <Link to="/projects" className="btn btn-primary" style={{marginTop: '1rem'}}>View All Projects</Link>
+            <Link to="/projects" className="btn btn-primary" style={{marginTop: '1rem'}}>View All Projects</Link> */}
           </div>
         </section>
 

@@ -5,18 +5,30 @@
 }
 
 .rotate-contaner{
+  width: 700px;
   perspective: 1200px;
   transform-style: preserve-3d;
 }
-.connector{
+.rotater{
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  transform-origin: center;
   transform-style: preserve-3d;
-  /* transform: rotateY(90deg); */
-  animation: rotate 5s ease infinite;
+  transform-origin: 50% 50%;
+  animation: rotate 15s ease infinite;
+}
+.connector{
+  width: 65%;
+  aspect-ratio: 1;
+  transform: rotateY(calc(var(--z) * 90deg));
+  display: flex;
+  align-items: center;
+  /* gap: 300px; */
+  justify-content: center;
+  transform-style: preserve-3d;
+  position: absolute;
+  background: red;
 }
 
 @keyframes rotate {
@@ -28,16 +40,22 @@
   }
 }
 
-.connector .project-box{
+
+.connector .holder{
+  width: 100%;
+  /* position: absolute; */
   /* transform: rotateY(90deg) translateZ(-360px); */
   transform: rotateY(90deg);
-  background: var(--bg-card);
-  flex: 0 0 auto
+  flex-shrink: 0;
+  /* flex: 0 0 auto */
+  background: blue;
+}
+.connector .holder:last-of-type{
+
 }
 
-.connector .project-box:nth-last-of-type(2){
-  transform: rotateY(-90deg);
-
+.connector:nth-of-type(2){
+  background-color: green;
 }
 
 /* ===== HERO ===== */

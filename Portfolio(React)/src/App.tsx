@@ -15,7 +15,7 @@ function App() {
     <ThemeProvider>
       <div className="wrapper">
       <Router>
-        <Header />
+        {/* <Header /> */}
         <div className="content">
           <Routes>
             <Route path="/*"        element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
         </div>
       </Router>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </ThemeProvider>
   );
 }
