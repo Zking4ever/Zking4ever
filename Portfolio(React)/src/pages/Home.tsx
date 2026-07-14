@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Home.css';
-import { LARGE_PROJECTS } from '../pages/Projects';
-import LargerProjectPoster from '../components/UI/ProjectCard/LargeProjectPoster';
+// import { LARGE_PROJECTS } from '../pages/Projects';
+// import LargerProjectPoster from '../components/UI/ProjectCard/LargeProjectPoster';
 import ProjectPreview from '../components/UI/ProjectCard/ProjectPreview';
 import { useRef, useState } from 'react';
 

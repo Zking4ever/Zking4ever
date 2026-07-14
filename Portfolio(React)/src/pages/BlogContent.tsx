@@ -1,5 +1,4 @@
 import { useParams, Link } from 'react-router-dom';
-import Header from '../components/Header';
 import { type BlogDataType } from '../components/UI/BlogCard/BlogCard';
 import { BlogDatasSample } from './Blog';
 import { useEffect, useState } from 'react';

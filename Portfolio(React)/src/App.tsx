@@ -6,7 +6,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogContent from './pages/BlogContent';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
 
