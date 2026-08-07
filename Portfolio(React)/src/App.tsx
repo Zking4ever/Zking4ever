@@ -9,10 +9,12 @@ import BlogContent from './pages/BlogContent';
 // import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <ThemeProvider>
+      <Analytics />
       <div className="wrapper">
       <Router>
         <Header />

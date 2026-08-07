@@ -3,6 +3,7 @@ import './Home.css';
 // import { LARGE_PROJECTS } from '../pages/Projects';
 // import LargerProjectPoster from '../components/UI/ProjectCard/LargeProjectPoster';
 import ProjectPreview from '../components/UI/ProjectCard/ProjectPreview';
+import Notification from '../components/Notification';
 import { useRef, useState } from 'react';
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
   return (
     <>
       <main className="home-page">
+        <Notification msg="This site is under construction. Thanks for visiting!" linkMsg="View my projects" link="/projects" />
         <section className="home-section projects-preview-section">
           <div className="section">
             <div className="rotate-contaner">
