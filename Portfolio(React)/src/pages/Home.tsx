@@ -59,12 +59,7 @@ export default function Home() {
             </div>
             <Link to="/projects" className="btn btn-primary" style={{marginTop: '1rem'}}>View All Projects</Link> */}
           </div>
-        </section>
-
-  
-
-        
-
+        </section>  
       </main>
     </>
   );

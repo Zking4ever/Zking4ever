@@ -4,6 +4,7 @@ import './About.css';
 import { FiGithub } from 'react-icons/fi';
 import { LuLinkedin } from 'react-icons/lu';
 import { MdOutlineEmail } from 'react-icons/md';
+import InteractiveGridProps from '../components/UI/ToolList/InteractiveGrid';
 
 const EDUCATION = [
   {
@@ -106,6 +107,8 @@ export default function About() {
             </div>
           </div>
         </section>
+        
+        <InteractiveGridProps />
 
         {/* ===== EDUCATION TIMELINE ===== */}
         <section className="about-education-section">
