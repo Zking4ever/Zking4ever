@@ -181,7 +181,7 @@
     transform: translateX(50%);
     max-width: 350px;
     padding: 0.5rem 1rem;
-    background: #fffafb;
+    background: var(--bg-card);
     border: 0.3px solid;
     text-align: left;
     justify-content: end;
@@ -213,7 +213,7 @@
     margin: 0;
 }
 .notification-content a{
-    color: white;
+    /* color: white; */
     padding: 5px 10px;
     align-self: right;
 }

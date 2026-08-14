@@ -52,7 +52,7 @@ export default function Notification({msg, linkMsg, link} : {msg: string, linkMs
             <div className="notification-content">
                 <p>{msg}
                 {/* <br />   <span onClick={handleDontShowAgain} style={{ textDecoration: 'underline', cursor: 'pointer', fontSize: '0.9rem' }}>Don't Show Again</span> */}
-                <br />   <span style={{ textDecoration: 'underline', cursor: 'pointer', fontSize: '0.9rem' }}> Come back soon!</span>
+                <br />   <span style={{ textDecoration: 'underline', cursor: 'pointer', fontSize: '0.9rem' }}> Come back later!</span>
                 </p>
                 {/* <a href={new URL(link, window.location.origin).href}> {linkMsg}</a> */}
       </div>
