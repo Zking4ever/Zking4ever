@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react"
 import { SiHtml5,SiCss3,SiJavascript,SiTypescript,SiReact,SiNodedotjs,SiExpress,SiMongodb,SiGithub,SiFigma } from "react-icons/si";
 
 
-const DEFAULT_LOGO = `data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='70.02'%20height='32'%20viewBox='0%200%20256%20117'%3e%3cpath%20fill='%23FBAD41'%20d='M205.52%2050.813c-.858%200-1.705.03-2.551.058c-.137.007-.272.04-.398.094a1.424%201.424%200%200%200-.92.994l-3.628%2012.672c-1.565%205.449-.983%2010.48%201.646%2014.174c2.41%203.416%206.42%205.421%2011.289%205.655l19.679%201.194c.585.03%201.092.312%201.4.776a1.92%201.92%200%200%201%20.2%201.692a2.496%202.496%200%200%201-2.134%201.662l-20.448%201.193c-11.11.515-23.062%209.58-27.255%2020.633l-1.474%203.9a1.092%201.092%200%200%200%20.967%201.49h70.425a1.872%201.872%200%200%200%201.81-1.365A51.172%2051.172%200%200%200%20256%20101.828c0-28.16-22.582-50.984-50.449-50.984'/%3e%3cpath%20fill='%23F6821F'%20d='m174.782%20115.362l1.303-4.583c1.568-5.449.987-10.48-1.639-14.173c-2.418-3.417-6.424-5.422-11.296-5.656l-92.312-1.193a1.822%201.822%200%200%201-1.459-.776a1.919%201.919%200%200%201-.203-1.693a2.496%202.496%200%200%201%202.154-1.662l93.173-1.193c11.063-.511%2023.015-9.58%2027.208-20.633l5.313-14.04c.214-.596.27-1.238.156-1.86C191.126%2020.51%20166.91%200%20137.96%200C111.269%200%2088.626%2017.403%2080.5%2041.596a26.996%2026.996%200%200%200-19.156-5.359C48.549%2037.524%2038.25%2047.946%2036.979%2060.88a27.905%2027.905%200%200%200%20.702%209.642C16.773%2071.145%200%2088.454%200%20109.726c0%201.923.137%203.818.413%205.667c.115.897.879%201.57%201.783%201.568h170.48a2.223%202.223%200%200%200%202.106-1.63'/%3e%3c/svg%3e`;
 
 const DEFAULTS = {
   padding: "50px",
@@ -10,7 +9,6 @@ const DEFAULTS = {
   rows: 4,
   gap: 0,
   rounded: 8,
-  logoScale: 3,
   cardFill: "#000000",
   cardBorder: "#292929",
   shadow: false,
@@ -24,14 +22,7 @@ const DEFAULTS = {
   rotateY: 0,
 };
 
-const DEFAULT_IMAGES = [
-  { src: "https://imagedelivery.net/IEUjvl3YUlxY-MrTpOAWDQ/96893eb2-f5ca-4aa1-e59e-474847bb4e00/w=800" },
-  { src: "https://imagedelivery.net/IEUjvl3YUlxY-MrTpOAWDQ/2bda84c8-1c36-4cac-cf2f-a12218d3ff00/w=800" },
-  { src: "https://imagedelivery.net/IEUjvl3YUlxY-MrTpOAWDQ/242516d3-ee0f-414a-8482-3bd38a4b6100/w=800" },
-  { src: "https://imagedelivery.net/IEUjvl3YUlxY-MrTpOAWDQ/80b1db5f-878b-4752-f8e0-159d308fb800/w=800" },
-  { src: "https://imagedelivery.net/IEUjvl3YUlxY-MrTpOAWDQ/b17683f8-25ff-4259-614c-343bb8793a00/w=800" },
-  { src: "https://imagedelivery.net/IEUjvl3YUlxY-MrTpOAWDQ/64475cf9-5072-4a75-c391-3e0627794c00/w=800" },
-];
+
 
 const toolsList = [
         { name: 'React',        logo: <SiReact className="logo" color="#61DAFB" size={55} style={{  margin: "0 auto"}}/> },
@@ -119,18 +110,14 @@ interface InteractiveGridProps {
   style?: CSSProperties;
 }
 
-const srcOf = (image: ImageItem | string): string =>
-  typeof image === "string" ? image : (image?.src ?? "");
 
 export default function InteractiveGrid(props: Partial<InteractiveGridProps>) {
   const {
-    images = DEFAULT_IMAGES,
     padding = DEFAULTS.padding,
     columns = DEFAULTS.columns,
     rows = DEFAULTS.rows,
     gap = DEFAULTS.gap,
     rounded = DEFAULTS.rounded,
-    logoScale = DEFAULTS.logoScale,
     cardFill = DEFAULTS.cardFill,
     cardBorder = DEFAULTS.cardBorder,
     shadow = DEFAULTS.shadow,
@@ -145,10 +132,7 @@ export default function InteractiveGrid(props: Partial<InteractiveGridProps>) {
     style,
   } = props;
 
-  const urls = useMemo(() => {
-    const list = (images ?? []).map(srcOf).filter(Boolean);
-    return list.length ? list : [DEFAULT_LOGO];
-  }, [images]);
+
 
   const cols = Math.max(1, Math.round(columns));
   const rowCount = Math.max(1, Math.round(rows));
